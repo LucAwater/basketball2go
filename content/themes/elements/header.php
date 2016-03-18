@@ -27,6 +27,9 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Fonts from Typography.com -->
+  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6711094/6197352/css/fonts.css" />
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.css">
 
