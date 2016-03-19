@@ -35,6 +35,7 @@ article p{
 }
 
 span,
-time{
+time,
+button{
   @extend %base;
 }

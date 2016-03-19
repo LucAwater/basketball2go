@@ -744,13 +744,15 @@ ul {
   margin-left: -0.9375rem; }
 
 h1, h2, p, span,
-time, a {
+time,
+button, a {
   font-family: 'Source Sans Pro', sans-serif;
   font-style: normal;
   font-size: 16px;
   font-weight: normal; }
   h1.is_bold, h2.is_bold, p.is_bold, span.is_bold,
-  time.is_bold, a.is_bold {
+  time.is_bold,
+  button.is_bold, a.is_bold {
     font-weight: 600; }
 
 h1 {
@@ -816,9 +818,6 @@ body > header,
 body > footer {
   padding: 0 6.25rem; }
 
-main {
-  padding-top: 60px; }
-
 main > * {
   padding: 3.125rem 6.25rem; }
   main > *:first-child {
@@ -863,7 +862,7 @@ body > header {
   z-index: 1100;
   width: 100%;
   height: 60px;
-  background-color: #f3f4f5; }
+  background-color: transparent; }
   body > header .link-logo {
     width: 50px; }
 
@@ -1086,7 +1085,7 @@ section {
     margin-bottom: 3.125rem; }
 
 section.hero {
-  height: calc(100vh - 60px);
+  height: 100vh;
   margin-top: 0;
   margin-bottom: 3.125rem;
   padding: 0;
@@ -1096,7 +1095,9 @@ section.hero {
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply; }
   section.hero .section-body {
     -moz-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
@@ -1226,6 +1227,53 @@ body.single-post article header h1 {
 body.single-post article header h1,
 body.single-post article header h2 {
   clear: both; }
+
+button,
+.button {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none; }
+
+button,
+.button {
+  overflow: hidden;
+  height: 40px;
+  padding: 5px 15px;
+  display: inline-block;
+  border-radius: 4px;
+  border: thin solid #f27041;
+  background-color: #f27041;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: 0; }
+  button:hover, button:focus,
+  .button:hover,
+  .button:focus {
+    border-color: #ef4c11;
+    background-color: #ef4c11; }
+
+.button-sec {
+  color: #f27041;
+  background-color: transparent;
+  border: thin solid #f27041; }
+  .button-sec:hover, .button-sec:focus {
+    color: white;
+    border-color: #f27041;
+    background-color: #f27041; }
 
 /*
  * Show and Hide class functions
@@ -1473,37 +1521,48 @@ section.image .section-body.is-pos-right {
   text-align: right; }
 
 h1.is-italic, h2.is-italic, p.is-italic, span.is-italic,
-time.is-italic, a.is-italic {
+time.is-italic,
+button.is-italic, a.is-italic {
   font-style: italic; }
 h1.is-underlined, h2.is-underlined, p.is-underlined, span.is-underlined,
-time.is-underlined, a.is-underlined {
+time.is-underlined,
+button.is-underlined, a.is-underlined {
   text-decoration: underline; }
 h1.is-capitalized, h2.is-capitalized, p.is-capitalized, span.is-capitalized,
-time.is-capitalized, a.is-capitalized {
+time.is-capitalized,
+button.is-capitalized, a.is-capitalized {
   text-transform: capitalize; }
 h1.is-uppercase, h2.is-uppercase, p.is-uppercase, span.is-uppercase,
-time.is-uppercase, a.is-uppercase {
+time.is-uppercase,
+button.is-uppercase, a.is-uppercase {
   text-transform: uppercase; }
 h1.is-lowercase, h2.is-lowercase, p.is-lowercase, span.is-lowercase,
-time.is-lowercase, a.is-lowercase {
+time.is-lowercase,
+button.is-lowercase, a.is-lowercase {
   text-transform: lowercase; }
 h1.is-bold, h2.is-bold, p.is-bold, span.is-bold,
-time.is-bold, a.is-bold {
+time.is-bold,
+button.is-bold, a.is-bold {
   font-weight: 700; }
 h1.is-aligned-center, h2.is-aligned-center, p.is-aligned-center, span.is-aligned-center,
-time.is-aligned-center, a.is-aligned-center {
+time.is-aligned-center,
+button.is-aligned-center, a.is-aligned-center {
   text-align: center; }
 h1.is-aligned-left, h2.is-aligned-left, p.is-aligned-left, span.is-aligned-left,
-time.is-aligned-left, a.is-aligned-left {
+time.is-aligned-left,
+button.is-aligned-left, a.is-aligned-left {
   text-align: left; }
 h1.is-aligned-right, h2.is-aligned-right, p.is-aligned-right, span.is-aligned-right,
-time.is-aligned-right, a.is-aligned-right {
+time.is-aligned-right,
+button.is-aligned-right, a.is-aligned-right {
   text-align: right; }
 h1.is-black, h2.is-black, p.is-black, span.is-black,
-time.is-black, a.is-black {
+time.is-black,
+button.is-black, a.is-black {
   color: black; }
 h1.is-white, h2.is-white, p.is-white, span.is-white,
-time.is-white, a.is-white {
+time.is-white,
+button.is-white, a.is-white {
   color: white; }
 
 p.is-small {

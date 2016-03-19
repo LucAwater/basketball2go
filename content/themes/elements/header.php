@@ -45,15 +45,19 @@
     </a>
 
     <nav>
-      <?php
-      $nav = array(
-        'theme_location'  => 'menu_primary',
-        'container'       => '',
-        'items_wrap'      => '<ul>%3$s</ul>'
-      );
+      <ul>
+        <?php
+        $nav = array(
+          'theme_location'  => 'menu_primary',
+          'container'       => '',
+          'items_wrap'      => '%3$s'
+        );
 
-      wp_nav_menu( $nav );
-      ?>
+        wp_nav_menu( $nav );
+        ?>
+
+        <li><button class="button-sec">Contact</button></li>
+      </ul>
     </nav>
   </header>
 
