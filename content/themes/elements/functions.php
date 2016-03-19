@@ -10,6 +10,7 @@ require_once('includes/scripts.php');
 require_once('includes/admin/acf-page.php');
 
 // Inludes: template functions
+require_once('includes/functions-template/elements.php');
 require_once('includes/functions-template/posts.php');
 require_once('includes/functions-template/section.php');
 require_once('includes/functions-template/section-header.php');
@@ -24,6 +25,23 @@ require_once('includes/functions-woocommerce/cart-update.php');
 add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
   add_theme_support( 'woocommerce' );
+}
+
+// Function to check if is any type of woocommerce page
+function is_really_woocommerce_page () {
+  if(  function_exists ( "is_woocommerce" ) && is_woocommerce()){
+    return true;
+  }
+
+  $woocommerce_keys = array("woocommerce_shop_page_id","woocommerce_terms_page_id","woocommerce_cart_page_id","woocommerce_checkout_page_id","woocommerce_pay_page_id","woocommerce_thanks_page_id","woocommerce_myaccount_page_id","woocommerce_edit_address_page_id","woocommerce_view_order_page_id","woocommerce_change_password_page_id","woocommerce_logout_page_id","woocommerce_lost_password_page_id" );
+
+  foreach ( $woocommerce_keys as $wc_page_id ) {
+    if ( get_the_ID () == get_option ( $wc_page_id , 0 ) ) {
+      return true ;
+    }
+  }
+
+  return false;
 }
 
 // Change the WooCommerce paypal icon
