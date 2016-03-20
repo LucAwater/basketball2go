@@ -2,7 +2,7 @@ a{
   @extend %base;
   @include transition( .2s );
 
-  font-size: 1em;
+  font-size: 14px;
   color: $grey-text;
   text-decoration: none;
   cursor: pointer;

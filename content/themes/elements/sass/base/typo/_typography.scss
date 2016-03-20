@@ -1,5 +1,5 @@
 %base{
-  @include source;
+  @include gotham;
 
   font-size: 16px;
   font-weight: normal;
@@ -24,7 +24,7 @@ h2{
 p{
   @extend %base;
 
-  font-size: .9em;
+  font-size: 14px;
 }
 
 article p{
@@ -38,4 +38,6 @@ span,
 time,
 button{
   @extend %base;
+
+  font-size: 14px;
 }

@@ -15,7 +15,6 @@
 /*
  * 3. Media queries
  */
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
 [class*="grid-"] {
   display: block;
   *zoom: 1; }
@@ -746,14 +745,11 @@ ul {
 h1, h2, p, span,
 time,
 button, a {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Gotham A", "Gotham B";
   font-style: normal;
+  font-weight: 400;
   font-size: 16px;
   font-weight: normal; }
-  h1.is_bold, h2.is_bold, p.is_bold, span.is_bold,
-  time.is_bold,
-  button.is_bold, a.is_bold {
-    font-weight: 600; }
 
 h1 {
   font-size: 4.5em; }
@@ -765,12 +761,17 @@ h2 {
   font-size: 2em; }
 
 p {
-  font-size: .9em; }
+  font-size: 14px; }
 
 article p {
   margin-bottom: 1em;
   font-size: 18px;
   line-height: 1.6; }
+
+span,
+time,
+button {
+  font-size: 14px; }
 
 a {
   -webkit-transition: 0.2s;
@@ -778,7 +779,7 @@ a {
   -ms-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
-  font-size: 1em;
+  font-size: 14px;
   color: #888888;
   text-decoration: none;
   cursor: pointer; }
