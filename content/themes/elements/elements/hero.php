@@ -7,10 +7,10 @@ $banner = get_field( 'hero_banner' );
 
 $b_image = get_field( 'hero_b_image' );
 $b_title = get_field( 'hero_b_title' );
-$b_text = preg_replace( '/<p>/', '<p class="is-' . $o_b_textColor . '">', get_field( 'hero_b_text' ) );
+$b_text = preg_replace( '/<p>/', '<h2>', get_field( 'hero_b_text' ) );
 
 // Classes
-$class_section = 'hero is-fullwidth';
+$class_section = 'hero';
 $class_banner = 'hero-banner';
 $class_body = 'section-body';
 ?>
@@ -42,5 +42,5 @@ $class_body = 'section-body';
     </div>
   <?php endif; ?>
 
-  <div class="arrow arrow-scroll"></div>
+  <a class="arrow-scroll">Find out more</a>
 </section>
