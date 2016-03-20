@@ -1,9 +1,10 @@
-nav ul{
+nav > ul{
   display: inline;
 
-  li{
+  > li{
     display: inline-block;
-    padding-right: 50px;
+    padding: 0 25px 30px;
+    margin-bottom: -30px;
 
     &:last-child{
       padding-right: 0;
@@ -16,4 +17,67 @@ nav ul{
   li.current{
     text-decoration: underline;
   }
+}
+
+// Sub menu
+nav .sub-menu{
+  @include hide( .2s );
+  @include box-shadow( 0 3px 10px rgba(0,0,0,.1) );
+
+  position: absolute;
+
+  margin: 30px 0 0 -15px;
+
+  border-radius: 4px;
+  background-color: $white;
+
+  &:before{
+    @include transform( rotate(45deg) );
+
+    content: "";
+
+    top: -8px;
+    left: 15px;
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 2px;
+    background-color: $white;
+  }
+
+  li{
+    width: 100%;
+    padding-right: 0;
+
+    a{
+      width: 100%;
+      padding: 15px;
+      display: block;
+
+      color: $black;
+      cursor: pointer;
+      white-space: nowrap;
+      border-bottom: thin solid $grey-light;
+
+      &:hover,
+      &:focus{
+        background-color: $grey-light;
+      }
+    }
+
+    &:first-child a{
+      border-radius: 4px 4px 0 0;
+    }
+
+    &:last-child a{
+      border-bottom: none;
+      border-radius: 0 0 4px 4px;
+    }
+  }
+}
+
+nav li.menu-item-has-children:hover .sub-menu{
+  @include show( .2s );
 }

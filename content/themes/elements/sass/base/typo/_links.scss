@@ -31,22 +31,25 @@ article a{
 
 // Navigation in header
 nav a{
-  padding-bottom: 0;
+  padding-bottom: 5px;
 
   color: $black;
   text-decoration: none;
-  border-bottom: thin solid transparent;
+  border-bottom: thin dotted transparent;
 
   &:hover,
   &:focus{
-    padding-bottom: 5px;
-
-    border-bottom: thin solid $black;
+    border-bottom: thin dotted $black;
   }
 }
 
 body.has-hero nav a{
   color: $white;
+
+  &:hover,
+  &:focus{
+    border-bottom: thin dotted $white;
+  }
 }
 
 nav .current_page_parent,
