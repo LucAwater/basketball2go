@@ -804,6 +804,9 @@ nav a {
     padding-bottom: 5px;
     border-bottom: thin solid black; }
 
+body.has-hero nav a {
+  color: white; }
+
 nav .current_page_parent a,
 nav .current-menu-item a {
   padding-bottom: 5px;
@@ -862,7 +865,7 @@ body > header {
   position: fixed;
   z-index: 1100;
   width: 100%;
-  height: 60px;
+  height: 100px;
   background-color: transparent; }
   body > header .link-logo {
     width: 50px; }
@@ -929,7 +932,7 @@ nav ul {
   display: inline; }
   nav ul li {
     display: inline-block;
-    padding-right: 30px; }
+    padding-right: 50px; }
     nav ul li:last-child {
       padding-right: 0; }
 

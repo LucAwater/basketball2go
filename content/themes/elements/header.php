@@ -45,7 +45,9 @@ $hero_elements = array(
   get_field('hero_b_text')
 );
 
-(($hero_elements) ? $body_class = 'has-hero': $body_class = '');
+$hero_elements = array_filter($hero_elements);
+
+( (!empty($hero_elements)) ? $body_class = 'has-hero': $body_class = '');
 ?>
 
 <body <?php body_class($body_class); ?>>

@@ -45,6 +45,10 @@ nav a{
   }
 }
 
+body.has-hero nav a{
+  color: $white;
+}
+
 nav .current_page_parent,
 nav .current-menu-item{
   a{

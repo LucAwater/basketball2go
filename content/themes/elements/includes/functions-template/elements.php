@@ -15,7 +15,9 @@ function get_elements(){
     get_field('hero_b_text')
   );
 
-  if( $hero_elements ){
+  $hero_elements = array_filter($hero_elements);
+
+  if (!empty($hero_elements)) {
     get_template_part( 'elements/hero' );
   }
 
