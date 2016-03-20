@@ -27,10 +27,11 @@ p{
   font-size: 14px;
 }
 
-article p{
+article p,
+section.text p{
   margin-bottom: 1em;
 
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
 }
 

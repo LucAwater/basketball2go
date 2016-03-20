@@ -763,9 +763,10 @@ h2 {
 p {
   font-size: 14px; }
 
-article p {
+article p,
+section.text p {
   margin-bottom: 1em;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6; }
 
 span,
@@ -870,6 +871,15 @@ body > header {
   background-color: transparent; }
   body > header .link-logo {
     width: 120px; }
+    body > header .link-logo img:first-child {
+      display: none; }
+    body > header .link-logo img:nth-child(2) {
+      display: block; }
+
+body.has-hero > header .link-logo img:first-child {
+  display: block; }
+body.has-hero > header .link-logo img:nth-child(2) {
+  display: none; }
 
 body > footer {
   z-index: 1100;

@@ -13,5 +13,25 @@ body > header{
 
   .link-logo{
     width: 120px;
+
+    img:first-child{
+      display: none;
+    }
+
+    img:nth-child(2){
+      display: block;
+    }
+  }
+}
+
+body.has-hero > header{
+  .link-logo{
+    img:first-child{
+      display: block;
+    }
+
+    img:nth-child(2){
+      display: none;
+    }
   }
 }

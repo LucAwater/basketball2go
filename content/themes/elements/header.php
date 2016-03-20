@@ -55,6 +55,7 @@ $hero_elements = array_filter($hero_elements);
   <header>
     <a class="link-logo" href="<?php echo home_url(); ?>">
       <img src="<?php echo bloginfo( 'template_directory' ); ?>/img/logo.svg">
+      <img src="<?php echo bloginfo( 'template_directory' ); ?>/img/logo-black.svg">
     </a>
 
     <nav>
