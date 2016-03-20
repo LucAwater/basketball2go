@@ -37,7 +37,18 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<?php
+$hero_elements = array(
+  get_field('hero_banner'),
+  get_field('hero_b_image'),
+  get_field('hero_b_title'),
+  get_field('hero_b_text')
+);
+
+(($hero_elements) ? $body_class = 'has-hero': $body_class = '');
+?>
+
+<body <?php body_class($body_class); ?>>
   <!-- Header -->
   <header>
     <a class="link-logo" href="<?php echo home_url(); ?>">
