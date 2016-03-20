@@ -761,7 +761,8 @@ h2 {
   font-size: 2em; }
 
 p {
-  font-size: 14px; }
+  font-size: 14px;
+  line-height: 1.6; }
 
 article p,
 section.text p {
@@ -825,11 +826,11 @@ body > footer {
   padding: 0 6.25rem; }
 
 main > * {
-  padding: 3.125rem 6.25rem; }
+  padding: 4.6875rem 6.25rem; }
   main > *:first-child {
-    padding-top: 6.25rem; }
+    padding-top: 9.375rem; }
   main > *:last-child {
-    padding-bottom: 6.25rem; }
+    padding-bottom: 9.375rem; }
 
 @media only screen and (max-width: 500px) {
   body > header,
@@ -864,7 +865,7 @@ body > header {
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   justify-content: space-between;
-  position: fixed;
+  position: absolute;
   z-index: 1100;
   width: 100%;
   height: 100px;
@@ -1155,7 +1156,7 @@ section {
     clear: both; }
   section .section-header {
     max-width: 700px;
-    margin-bottom: 3.125rem; }
+    margin-bottom: 4.6875rem; }
 
 section.hero {
   display: -webkit-box;
@@ -1173,7 +1174,7 @@ section.hero {
   justify-content: flex-start;
   height: 100vh;
   margin-top: 0;
-  margin-bottom: 3.125rem;
+  margin-bottom: 4.6875rem;
   padding: 0;
   overflow: hidden; }
   section.hero .hero-banner {
@@ -1226,6 +1227,67 @@ section.image .section-body figure {
   display: inline-block;
   text-align: left; }
 
+section.module .section-body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  section.module .section-body .module-image,
+  section.module .section-body .module-text {
+    width: 50%; }
+  section.module .section-body .module-image {
+    padding-right: 45px; }
+    section.module .section-body .module-image img {
+      width: 100%; }
+  section.module .section-body .module-text {
+    padding-left: 45px; }
+    section.module .section-body .module-text p,
+    section.module .section-body .module-text h2 {
+      margin-bottom: 1em; }
+section.module.orientated-right .section-body {
+  -webkit-box-direction: reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row-reverse;
+  -moz-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse; }
+  section.module.orientated-right .section-body .module-image {
+    padding-right: 0;
+    padding-left: 45px; }
+  section.module.orientated-right .section-body .module-text {
+    padding-left: 0;
+    padding-right: 45px; }
+  section.module.orientated-right .section-body > p {
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    left: auto;
+    right: -150px; }
+section.module.align-bottom .section-body {
+  -webkit-align-items: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end; }
+
+@media only screen and (max-width: 1000px) {
+  section.module.orientated-right .section-body, section.module.orientated-left .section-body {
+    display: block; }
+    section.module.orientated-right .section-body .module-image,
+    section.module.orientated-right .section-body .module-text, section.module.orientated-left .section-body .module-image,
+    section.module.orientated-left .section-body .module-text {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0; }
+    section.module.orientated-right .section-body .module-image, section.module.orientated-left .section-body .module-image {
+      margin-bottom: 45px; } }
+@media only screen and (max-width: 500px) {
+  section.module .section-body > p {
+    left: -130px; }
+  section.module.orientated-right .section-body > p {
+    left: auto;
+    right: -130px; } }
 section.grid ul {
   width: 100%; }
   section.grid ul li {
@@ -1611,12 +1673,12 @@ section.has-extra-pad-top,
 .section-header.has-extra-pad-top,
 .section-body.has-extra-pad-top,
 .section-footer.has-extra-pad-top {
-  padding-top: 12.5rem; }
+  padding-top: 18.75rem; }
 section.has-extra-pad-bottom,
 .section-header.has-extra-pad-bottom,
 .section-body.has-extra-pad-bottom,
 .section-footer.has-extra-pad-bottom {
-  padding-bottom: 12.5rem; }
+  padding-bottom: 18.75rem; }
 
 section.image .section-body.is-pos-left {
   text-align: left; }

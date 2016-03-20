@@ -35,6 +35,8 @@ function get_elements(){
         get_template_part( 'elements/image' );
       elseif( get_row_layout() == 'module' ):
         get_template_part( 'elements/module' );
+      elseif( get_row_layout() == 'module' ):
+        get_template_part( 'elements/module' );
       elseif( get_row_layout() == 'grid_primary' ):
         get_template_part( 'elements/gridPri' );
       elseif( get_row_layout() == 'slider' ):
