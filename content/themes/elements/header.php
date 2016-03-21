@@ -30,6 +30,10 @@
   <!-- Fonts from Typography.com -->
   <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6711094/6197352/css/fonts.css" />
 
+  <!-- Fonts from Typekit -->
+  <script src="https://use.typekit.net/ike3vql.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.css">
 

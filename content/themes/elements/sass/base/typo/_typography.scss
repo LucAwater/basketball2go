@@ -7,8 +7,10 @@
 
 h1{
   @extend %base;
+  @include acumin;
 
-  font-size: 4.5em;
+  font-size: 75px;
+  line-height: 1.2;
 }
 
 article h1{
@@ -17,8 +19,9 @@ article h1{
 
 h2{
   @extend %base;
+  @include acumin;
 
-  font-size: 2em;
+  font-size: 40px;
 }
 
 p{

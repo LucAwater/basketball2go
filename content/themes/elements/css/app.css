@@ -752,13 +752,20 @@ button, a {
   font-weight: normal; }
 
 h1 {
-  font-size: 4.5em; }
+  font-family: "acumin-pro-extra-condensed",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 75px;
+  line-height: 1.2; }
 
 article h1 {
   font-size: 2.5em; }
 
 h2 {
-  font-size: 2em; }
+  font-family: "acumin-pro-extra-condensed",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px; }
 
 p {
   font-size: 14px;
@@ -1173,10 +1180,10 @@ section.hero {
   -moz-justify-content: flex-start;
   justify-content: flex-start;
   height: 100vh;
-  margin-top: 0;
-  margin-bottom: 4.6875rem;
   padding: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: 0;
+  margin-bottom: 4.6875rem; }
   section.hero .hero-banner {
     position: absolute;
     width: 100%;
@@ -1188,12 +1195,13 @@ section.hero {
     background-blend-mode: multiply; }
   section.hero .section-body {
     padding: 6.25rem; }
-    section.hero .section-body h2 {
+    section.hero .section-body h1 {
       color: white; }
   section.hero > a {
     bottom: 40px;
     left: 6.25rem;
     position: absolute;
+    padding-right: 20px;
     color: white; }
     section.hero > a:after {
       -moz-transform: rotate(45deg);
@@ -1203,7 +1211,7 @@ section.hero {
       transform: rotate(45deg);
       content: "";
       top: 0;
-      right: -20px;
+      right: 0;
       position: absolute;
       width: 10px;
       height: 10px;

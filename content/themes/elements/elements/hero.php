@@ -7,7 +7,7 @@ $banner = get_field( 'hero_banner' );
 
 $b_image = get_field( 'hero_b_image' );
 $b_title = get_field( 'hero_b_title' );
-$b_text = preg_replace( '/<p>/', '<h2>', get_field( 'hero_b_text' ) );
+$b_text = preg_replace( '/<p>/', '<h1>', get_field( 'hero_b_text' ) );
 
 // Classes
 $class_section = 'hero';
