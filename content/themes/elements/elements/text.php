@@ -8,7 +8,7 @@ $o_b_align = get_sub_field( 'text_o_b_align' );
 // Content (variables)
 $h_title = get_sub_field( 'text_b_title' );
 
-$b_text = preg_replace( '/<p>/', '<p class="is-aligned-' . $o_b_align . '">', get_sub_field( 'text_b_text' ) );
+$b_text = wpautop( get_sub_field( 'text_b_text' ) );
 
 // Classes
 $class_section = 'text';

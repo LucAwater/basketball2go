@@ -5,10 +5,12 @@ jQuery(document).ready( function($) {
     var items = menu.find('.wp-has-submenu > a');
 
     items.on( 'click', function(e) {
-      e.preventDefault();
-
-      items.parent().removeClass("tamed-menu-open");
-      $(this).parent().addClass("tamed-menu-open");
+      if(! $('body').hasClass('folded') ){
+        e.preventDefault();
+        
+        items.parent().removeClass("tamed-menu-open");
+        $(this).parent().addClass("tamed-menu-open");
+      }
     });
   };
 

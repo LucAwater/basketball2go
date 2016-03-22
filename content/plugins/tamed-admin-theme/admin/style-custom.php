@@ -190,7 +190,7 @@ if( $option_theme === 'default' || empty($option_theme) ):
       background: {$color_3};
     }
     #adminmenuwrap ul#adminmenu li.wp-has-submenu ul.wp-submenu li a {
-      color: {$color_3};
+      color: {$color_1} !important;
     }
     #adminmenuwrap ul#adminmenu li.wp-has-submenu ul.wp-submenu li a.current {
       color: white;
@@ -254,6 +254,13 @@ if( $option_theme === 'default' || empty($option_theme) ):
     .acf-button:focus {
       outline: none !important;
     }
+    .wp-core-ui .button-primary.disabled,
+    .wp-core-ui .button-primary-disabled,
+    .wp-core-ui .button-primary:disabled,
+    .wp-core-ui .button-primary[disabled] {
+      color: {$color_1} !important;
+      background-color: {$color_4} !important;
+    }
 
     /*
      * Messages
@@ -314,7 +321,7 @@ if( $option_theme === 'default' || empty($option_theme) ):
     }
 
     input[type=radio]:checked:before {
-      color: {$color_4};
+      background-color: {$color_4};
     }
 
     .view-switch a.current:before {
@@ -505,6 +512,13 @@ elseif( $option_theme === 'light' ):
     .acf-button:focus {
       outline: none !important;
     }
+    .wp-core-ui .button-primary.disabled,
+    .wp-core-ui .button-primary-disabled,
+    .wp-core-ui .button-primary:disabled,
+    .wp-core-ui .button-primary[disabled] {
+      color: {$color_1} !important;
+      background-color: {$color_4} !important;
+    }
 
     /*
      * Messages
@@ -566,7 +580,7 @@ elseif( $option_theme === 'light' ):
     }
 
     input[type=radio]:checked:before {
-      color: {$color_4};
+      background-color: {$color_4};
     }
 
     .view-switch a.current:before {
@@ -716,7 +730,7 @@ elseif( $option_theme === 'clean' ):
       color: {$color_4};
     }
     #adminmenuwrap ul#adminmenu li a .wp-menu-image:before {
-      color: white;
+      color: {white};
     }
     #adminmenuwrap ul#adminmenu li a .wp-menu-name {
       color: white;
@@ -728,12 +742,12 @@ elseif( $option_theme === 'clean' ):
       color: white;
     }
     #adminmenuwrap ul#adminmenu li.current a .wp-menu-image:before, #adminmenuwrap ul#adminmenu li.wp-has-current-submenu a .wp-menu-image:before {
-      color: {$color_4};
+      color: {$color_4} !important;
     }
     #adminmenuwrap ul#adminmenu li.wp-has-submenu ul.wp-submenu {
       width: 200px;
       padding-left: 25px;
-      background: transparent;
+      background: {$color_2} !important;
     }
     #adminmenuwrap ul#adminmenu li.wp-has-submenu ul.wp-submenu li a {
       color: {$color_3};
@@ -806,6 +820,13 @@ elseif( $option_theme === 'clean' ):
     .acf-button:active,
     .acf-button:focus {
       outline: none !important;
+    }
+    .wp-core-ui .button-primary.disabled,
+    .wp-core-ui .button-primary-disabled,
+    .wp-core-ui .button-primary:disabled,
+    .wp-core-ui .button-primary[disabled] {
+      color: {$color_1} !important;
+      background-color: {$color_4} !important;
     }
 
     /*
@@ -881,7 +902,7 @@ elseif( $option_theme === 'clean' ):
     }
 
     input[type=radio]:checked:before {
-      color: {$color_4};
+      background-color: {$color_4};
     }
 
     .view-switch a.current:before {

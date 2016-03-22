@@ -3,15 +3,35 @@ body > header{
   @include align-items( center );
   @include justify-content( space-between );
 
-  position: fixed;
+  position: absolute;
   z-index: $zIndex-header;
 
   width: 100%;
   height: $header-height;
 
-  background-color: $grey-light;
+  background-color: transparent;
 
   .link-logo{
-    width: 50px;
+    width: 120px;
+
+    img:first-child{
+      display: none;
+    }
+
+    img:nth-child(2){
+      display: block;
+    }
+  }
+}
+
+body.has-hero > header{
+  .link-logo{
+    img:first-child{
+      display: block;
+    }
+
+    img:nth-child(2){
+      display: none;
+    }
   }
 }

@@ -2,7 +2,7 @@ a{
   @extend %base;
   @include transition( .2s );
 
-  font-size: 1em;
+  font-size: 14px;
   color: $grey-text;
   text-decoration: none;
   cursor: pointer;
@@ -31,17 +31,24 @@ article a{
 
 // Navigation in header
 nav a{
-  padding-bottom: 0;
+  padding-bottom: 5px;
 
   color: $black;
   text-decoration: none;
-  border-bottom: thin solid transparent;
+  border-bottom: thin dotted transparent;
 
   &:hover,
   &:focus{
-    padding-bottom: 5px;
+    border-bottom: thin dotted $black;
+  }
+}
 
-    border-bottom: thin solid $black;
+body.has-hero nav a{
+  color: $white;
+
+  &:hover,
+  &:focus{
+    border-bottom: thin dotted $white;
   }
 }
 

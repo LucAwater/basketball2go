@@ -35,3 +35,15 @@
   opacity: 1;
   visibility: visible;
 }
+
+@mixin appearance( $appearance ){
+  appearance: $appearance;
+  -moz-appearance: $appearance;
+  -webkit-appearance: $appearance;
+}
+
+@mixin box-shadow( $box-shadow ){
+  box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+  -webkit-box-shadow: $box-shadow;
+}

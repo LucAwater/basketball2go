@@ -3,10 +3,6 @@ body > footer{
   padding: 0 $space-sides;
 }
 
-main{
-  padding-top: $header-height;
-}
-
 main > *{
   padding: ($space-section / 2) $space-sides;
 

@@ -1,4 +1,6 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 class tamed_settings {
   /**
    * Holds the values to be used in the fields callbacks
@@ -50,36 +52,17 @@ class tamed_settings {
     register_setting('tamed_options', 'tamed_footer_content');
     register_setting('tamed_options', 'tamed_menu_order');
     register_setting('tamed_options', 'tamed_menu_removals');
-  }
 
-  /**
-   * Sanitize each setting field as needed
-   *
-   * @param array $input Contains all settings fields as array keys
-   */
-  public function sanitize( $input ) {
-    $new_input = array();
-    if( isset( $input['id_number'] ) )
-      $new_input['id_number'] = absint( $input['id_number'] );
+    if( isset($GLOBALS['menu']) ){
+      $items = $GLOBALS['menu'];
 
-    return $new_input;
-  }
-
-  /**
-   * Print the Section text
-   */
-  public function print_section_info() {
-    print 'Enter your settings below:';
-  }
-
-  /**
-   * Get the settings option array and print one of its values
-   */
-  public function id_number_callback() {
-    printf(
-      '<input type="text" id="id_number" name="my_option_name[id_number]" value="%s" />',
-      isset( $this->options['id_number'] ) ? esc_attr( $this->options['id_number']) : ''
-    );
+      foreach( $items as $item ){
+        $item_name = preg_replace('/[0-9]+/', '', $item[0]);
+        ( (empty($item[0])) ? $item_slug = 'separator' : $item_slug = $item[5] );
+        $item_value = get_option('tamed_menu_name_' . $item_slug, $item_name);
+        register_setting('tamed_options', 'tamed_menu_name_' . $item_slug);
+      }
+    }
   }
 }
 ?>

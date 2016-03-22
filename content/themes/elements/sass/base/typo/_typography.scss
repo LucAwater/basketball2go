@@ -1,5 +1,5 @@
 %base{
-  @include source;
+  @include gotham;
 
   font-size: 16px;
   font-weight: normal;
@@ -7,8 +7,10 @@
 
 h1{
   @extend %base;
+  @include acumin;
 
-  font-size: 4.5em;
+  font-size: 75px;
+  line-height: 1.2;
 }
 
 article h1{
@@ -17,24 +19,30 @@ article h1{
 
 h2{
   @extend %base;
+  @include acumin;
 
-  font-size: 2em;
+  font-size: 40px;
 }
 
 p{
   @extend %base;
 
-  font-size: .9em;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
-article p{
+article p,
+section.text p{
   margin-bottom: 1em;
 
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
 span,
-time{
+time,
+button{
   @extend %base;
+
+  font-size: 14px;
 }

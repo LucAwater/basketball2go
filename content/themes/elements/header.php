@@ -10,7 +10,7 @@
 <!--[if IE 9]>    <html class="no-js lt-ie10" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
-  <title>YOUR SITE</title>
+  <title>Basketball2Go</title>
 
   <link rel="canonical" href="<?php echo home_url(); ?>">
 
@@ -30,6 +30,10 @@
   <!-- Fonts from Typography.com -->
   <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6711094/6197352/css/fonts.css" />
 
+  <!-- Fonts from Typekit -->
+  <script src="https://use.typekit.net/ike3vql.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.css">
 
@@ -37,23 +41,41 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<?php
+$hero_elements = array(
+  get_field('hero_banner'),
+  get_field('hero_b_image'),
+  get_field('hero_b_title'),
+  get_field('hero_b_text')
+);
+
+$hero_elements = array_filter($hero_elements);
+
+( (!empty($hero_elements)) ? $body_class = 'has-hero': $body_class = '');
+?>
+
+<body <?php body_class($body_class); ?>>
   <!-- Header -->
   <header>
     <a class="link-logo" href="<?php echo home_url(); ?>">
       <img src="<?php echo bloginfo( 'template_directory' ); ?>/img/logo.svg">
+      <img src="<?php echo bloginfo( 'template_directory' ); ?>/img/logo-black.svg">
     </a>
 
     <nav>
-      <?php
-      $nav = array(
-        'theme_location'  => 'menu_primary',
-        'container'       => '',
-        'items_wrap'      => '<ul>%3$s</ul>'
-      );
+      <ul>
+        <?php
+        $nav = array(
+          'theme_location'  => 'menu_primary',
+          'container'       => '',
+          'items_wrap'      => '%3$s'
+        );
 
-      wp_nav_menu( $nav );
-      ?>
+        wp_nav_menu( $nav );
+        ?>
+
+        <li><button class="button-sec">Contact</button></li>
+      </ul>
     </nav>
   </header>
 

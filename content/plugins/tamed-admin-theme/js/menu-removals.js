@@ -23,7 +23,7 @@ jQuery(document).ready( function($) {
   }
 
   // Removing items
-  $('#tamed-menu-order li span').click( function() {
+  $('#tamed-menu-order li .menu-item-remove').click( function() {
     // Get data
     var page = $(this).parent().data("page");
     var name = $(this).parent().children('p').text();
