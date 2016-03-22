@@ -26,7 +26,7 @@ section_start( $class_section );
       echo '<img src="' . $image['sizes']['large'] . '" width="' . $image['width'] . '" height="' . $image['height'] . '">';
 
       if( $caption )
-        echo '<figcaption><p class="is-small is-italic">' . $caption . '</p></figcaption>';
+        echo '<figcaption>' . $caption . '</figcaption>';
 
     echo '</figure>';
 
