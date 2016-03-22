@@ -3,7 +3,7 @@
 Plugin Name: Tamed Wordpress Admin Theme
 Plugin URI: http://codecanyon.net/item/tamed-wordpress-admin-theme/13800689
 Description: A powerful WordPress Admin Theme that transforms your WordPress backend into a more calm, clean and overall better place to work, personalised for your client or project.
-Version: 2.5
+Version: 2.5.5
 Author: Luc Awater
 Author URI: http://lucawater.nl
 Copyright: Luc Awater
@@ -105,6 +105,7 @@ if( class_exists('tamed') ) {
     wp_enqueue_script('menu-order', plugins_url('js/menu-order.js', __FILE__));
     wp_enqueue_script('menu-removals', plugins_url('js/menu-removals.js', __FILE__));
     wp_enqueue_script('menu-collapse', plugins_url('js/menu-collapse.js', __FILE__));
+    wp_enqueue_script('menu-names', plugins_url('js/menu-names.js', __FILE__));
   }
   add_action('admin_enqueue_scripts', 'tamed_scripts');
 
@@ -213,6 +214,30 @@ if( class_exists('tamed') ) {
     add_filter( 'custom_menu_order', '__return_true' );
     add_filter( 'menu_order', 'tamed_menu_order' );
   }
+
+  /*
+   * Edit top-level menu titles
+   */
+  function edit_menu_titles() {
+    global $menu;
+
+    if( isset($GLOBALS['menu']) ){
+      $items = $GLOBALS['menu'];
+
+      foreach( $menu as $key => $value ){
+        foreach( $items as $item ){
+          $item_name = preg_replace('/[0-9]+/', '', $item[0]);
+          ( (empty($item[0])) ? $item_slug = 'separator' : $item_slug = $item[5] );
+          $item_value = get_option('tamed_menu_name_' . $item_slug);
+
+          if( $item_slug && $item_value && $item[2] == $menu[$key][2] ){
+            $menu[$key][0] = get_option('tamed_menu_name_' . $item_slug);
+          }
+        }
+      }
+    }
+  }
+  add_action( 'admin_menu', 'edit_menu_titles' );
 
   /*
    * Remove menu items

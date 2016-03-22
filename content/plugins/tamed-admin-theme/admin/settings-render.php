@@ -1,4 +1,6 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 $option_theme = get_option('tamed_theme', 'default');
 ?>
 
@@ -6,6 +8,7 @@ $option_theme = get_option('tamed_theme', 'default');
   <h1>Tamed Admin Theme / settings</h1>
   <form method="post" action="options.php">
     <?php
+    print_r(settings_fields( 'tamed_options' ));
     // This prints out all hidden setting fields
     settings_fields( 'tamed_options' );
 
@@ -182,10 +185,33 @@ $option_theme = get_option('tamed_theme', 'default');
             $items = $GLOBALS['menu'];
 
             foreach( $items as $item ){
+              $item_name = preg_replace('/[0-9]+/', '', $item[0]);
+              ( (empty($item[0])) ? $item_slug = 'separator' : $item_slug = $item[5] );
+              $item_value = get_option('tamed_menu_name_' . $item_slug, $item_name);
+
               if( $item[2] == 'options-general.php' ){
-                echo '<li data-page="' . $item[2] . '" draggable="true"><p>' . preg_replace('/[0-9]+/', '', $item[0]) . '</p></li>';
+                echo
+                '<li data-page="' . $item[2] . '" data-name="' . strtolower($item_name) . '" draggable="true">
+                <p>' . (($item_value) ? $item_value : $item_name) . '</p>
+                <input type="text" name="tamed_menu_name_' . $item_slug . '" value="' . (($item_value) ? $item_value : $item_name) . '">
+                <a class="button menu-item-save">submit</a>
+                <span class="button button-small menu-item-edit">edit</span>
+                </li>';
+              } elseif( $item[2] == 'separator1' || $item[2] == 'separator2' || $item[2] == 'separator-last' ) {
+                echo
+                '<li data-page="' . $item[2] . '" data-name="' . strtolower($item_name) . '" draggable="true">
+                  <p></p>
+                  <span class="button button-small menu-item-remove">remove</span>
+                </li>';
               } else {
-                echo '<li data-page="' . $item[2] . '" draggable="true"><p>' . preg_replace('/[0-9]+/', '', $item[0]) . '</p><span>remove</span></li>';
+                echo
+                '<li data-page="' . $item[2] . '" data-name="' . strtolower($item_name) . '" draggable="true">
+                  <p>' . (($item_value) ? $item_value : $item_name) . '</p>
+                  <input type="text" name="tamed_menu_name_' . $item_slug . '" value="' . $item_value . '">
+                  <a class="button menu-item-save">submit</a>
+                  <span class="button button-small menu-item-edit">edit</span>
+                  <span class="button button-small menu-item-remove">remove</span>
+                </li>';
               }
             }
           echo '</ul>';

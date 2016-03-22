@@ -105,6 +105,11 @@
   background-color: #3F89B2 !important;
 }
 
+button,
+.button,
+.acf-button {
+  outline: 0 !important;
+}
 button.button-primary, button.blue,
 .button.button-primary,
 .button.blue,
@@ -125,6 +130,14 @@ button:active, button:focus,
 .acf-button:active,
 .acf-button:focus {
   outline: none !important;
+}
+
+.wp-core-ui .button-primary.disabled,
+.wp-core-ui .button-primary-disabled,
+.wp-core-ui .button-primary:disabled,
+.wp-core-ui .button-primary[disabled] {
+  color: #F2F2F2 !important;
+  background-color: #4BA0D9 !important;
 }
 
 /*
@@ -186,7 +199,7 @@ input[type="checkbox"]:before {
 }
 
 input[type=radio]:checked:before {
-  color: #4BA0D9;
+  background-color: #4BA0D9;
 }
 
 .view-switch a.current:before {

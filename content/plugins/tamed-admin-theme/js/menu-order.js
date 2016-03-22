@@ -26,5 +26,12 @@ jQuery(document).ready( function($) {
     $('#tamed_menu_list_input').val('');
     $('#tamed_menu_removals_input').val('');
     $('#tamed-menu-order').addClass('reset');
+
+    var name_items = $('#tamed-menu-order li');
+
+    for(i = 0; i < name_items.length; i++){
+      var item = $(name_items[i]).find('input');
+      item.attr('value', '');
+    };
   });
 });
