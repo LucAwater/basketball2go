@@ -823,11 +823,6 @@ body.has-hero nav a {
   body.has-hero nav a:hover, body.has-hero nav a:focus {
     border-bottom: thin dotted white; }
 
-nav .current_page_parent a,
-nav .current-menu-item a {
-  padding-bottom: 5px;
-  border-bottom: thin solid black; }
-
 html,
 body {
   height: 100% !important;
@@ -962,8 +957,11 @@ nav > ul {
     nav > ul > li:last-child {
       padding-right: 0; }
 
-nav ul li.current {
-  text-decoration: underline; }
+nav .current_page_parent a,
+nav .current-menu-item a,
+nav .current-menu-parent a {
+  padding-bottom: 5px;
+  border-bottom: thin solid black; }
 
 nav .sub-menu {
   -webkit-transition: 0.2s;
@@ -1012,6 +1010,8 @@ nav .sub-menu {
     nav .sub-menu li:last-child a {
       border-bottom: none;
       border-radius: 0 0 4px 4px; }
+    nav .sub-menu li.current-menu-item {
+      background-color: #f3f4f5; }
 
 nav li.menu-item-has-children:hover .sub-menu {
   -webkit-transition: 0.2s;
@@ -1392,6 +1392,8 @@ body.single-post article {
   margin: 0 auto; }
   body.single-post article header {
     margin-bottom: 50px; }
+  body.single-post article section {
+    padding: 25px 0; }
 
 body.single-post article header .post-categories {
   float: left; }

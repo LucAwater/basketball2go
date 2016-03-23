@@ -51,12 +51,3 @@ body.has-hero nav a{
     border-bottom: thin dotted $white;
   }
 }
-
-nav .current_page_parent,
-nav .current-menu-item{
-  a{
-    padding-bottom: 5px;
-
-    border-bottom: thin solid $black;
-  }
-}
