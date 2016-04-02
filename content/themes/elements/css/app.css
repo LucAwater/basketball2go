@@ -1169,6 +1169,7 @@ section {
     clear: both; }
   section .section-header {
     max-width: 700px;
+    margin: auto;
     margin-bottom: 4.6875rem; }
 
 section.hero {
