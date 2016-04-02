@@ -31,7 +31,7 @@ $class_body = 'section-body';
 
       // Title
       if( $b_title ):
-        echo '<h1 class="is-bold is-' . $o_b_textColor . '">' . $b_title . '</h1>';
+        echo '<h1 class="is-' . $o_b_textColor . '">' . $b_title . '</h1>';
       endif;
 
       // Text
