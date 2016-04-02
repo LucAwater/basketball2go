@@ -957,11 +957,22 @@ nav > ul {
     nav > ul > li:last-child {
       padding-right: 0; }
 
-nav .current_page_parent a,
-nav .current-menu-item a,
-nav .current-menu-parent a {
+nav .current_page_parent > a,
+nav .current-menu-item > a,
+nav .current-menu-parent > a {
   padding-bottom: 5px;
   border-bottom: thin solid black; }
+
+body.has-hero nav .current_page_parent > a,
+body.has-hero nav .current-menu-item > a,
+body.has-hero nav .current-menu-parent > a {
+  border-color: white; }
+  body.has-hero nav .current_page_parent > a:hover, body.has-hero nav .current_page_parent > a:focus,
+  body.has-hero nav .current-menu-item > a:hover,
+  body.has-hero nav .current-menu-item > a:focus,
+  body.has-hero nav .current-menu-parent > a:hover,
+  body.has-hero nav .current-menu-parent > a:focus {
+    border-bottom: thin solid white; }
 
 nav .sub-menu {
   -webkit-transition: 0.2s;
