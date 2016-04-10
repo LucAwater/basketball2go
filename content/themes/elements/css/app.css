@@ -1149,9 +1149,13 @@ nav li.menu-item-has-children:hover .sub-menu {
     .slider-controls .arrow.arrow-left {
       left: 0;
       margin-left: 2em; }
+      .slider-controls .arrow.arrow-left:hover, .slider-controls .arrow.arrow-left:focus {
+        margin-left: 1.5em; }
     .slider-controls .arrow.arrow-right {
       right: 0;
       margin-right: 2em; }
+      .slider-controls .arrow.arrow-right:hover, .slider-controls .arrow.arrow-right:focus {
+        margin-right: 1.5em; }
 
 .section-slider .section-content .slider-controls {
   -webkit-transition: 0.3s;
