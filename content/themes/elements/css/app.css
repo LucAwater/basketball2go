@@ -1406,6 +1406,9 @@ body.single-post article {
     margin-bottom: 50px; }
   body.single-post article section {
     padding: 25px 0; }
+  body.single-post article section.module {
+    width: 150%;
+    margin-left: -25%; }
 
 body.single-post article header .post-categories {
   float: left; }
@@ -1423,6 +1426,10 @@ body.single-post article header h1,
 body.single-post article header h2 {
   clear: both; }
 
+@media only screen and (max-width: 1000px) {
+  body.single-post article section.module {
+    width: 100%;
+    margin-left: 0; } }
 button,
 .button {
   -webkit-transition: 0.2s;

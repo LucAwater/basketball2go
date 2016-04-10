@@ -10,6 +10,11 @@ body.single-post{
     section{
       padding: 25px 0;
     }
+
+    section.module{
+      width: 150%;
+      margin-left: -25%;
+    }
   }
 }
 
@@ -41,5 +46,16 @@ body.single-post article header{
   h1,
   h2{
     clear: both;
+  }
+}
+
+@media #{$medium-down}{
+  body.single-post{
+    article{
+      section.module{
+        width: 100%;
+        margin-left: 0;
+      }
+    }
   }
 }
