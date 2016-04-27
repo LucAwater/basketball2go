@@ -41,8 +41,14 @@ section.text p{
 
 span,
 time,
-button{
+button,
+figcaption{
   @extend %base;
 
   font-size: 14px;
+}
+
+figcaption{
+  font-size: 12px;
+  font-style: italic;
 }

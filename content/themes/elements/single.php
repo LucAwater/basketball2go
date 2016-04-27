@@ -31,7 +31,7 @@ if( have_posts() ):
         <h2><?php echo $subtitle; ?></h2>
       </header>
 
-      <?php echo $content; ?>
+      <?php get_elements(); ?>
     </article>
 
     <?php

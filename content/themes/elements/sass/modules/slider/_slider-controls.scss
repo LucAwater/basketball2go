@@ -15,11 +15,21 @@
     &.arrow-left{
       left: 0;
       margin-left: 2em;
+
+      &:hover,
+      &:focus{
+        margin-left: 1.5em;
+      }
     }
 
     &.arrow-right{
       right: 0;
       margin-right: 2em;
+
+      &:hover,
+      &:focus{
+        margin-right: 1.5em;
+      }
     }
   }
 }

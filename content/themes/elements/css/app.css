@@ -744,7 +744,8 @@ ul {
 
 h1, h2, p, span,
 time,
-button, a {
+button,
+figcaption, a {
   font-family: "Gotham A", "Gotham B";
   font-style: normal;
   font-weight: 400;
@@ -779,8 +780,13 @@ section.text p {
 
 span,
 time,
-button {
+button,
+figcaption {
   font-size: 14px; }
+
+figcaption {
+  font-size: 12px;
+  font-style: italic; }
 
 a {
   -webkit-transition: 0.2s;
@@ -816,11 +822,6 @@ body.has-hero nav a {
   color: white; }
   body.has-hero nav a:hover, body.has-hero nav a:focus {
     border-bottom: thin dotted white; }
-
-nav .current_page_parent a,
-nav .current-menu-item a {
-  padding-bottom: 5px;
-  border-bottom: thin solid black; }
 
 html,
 body {
@@ -956,8 +957,22 @@ nav > ul {
     nav > ul > li:last-child {
       padding-right: 0; }
 
-nav ul li.current {
-  text-decoration: underline; }
+nav .current_page_parent > a,
+nav .current-menu-item > a,
+nav .current-menu-parent > a {
+  padding-bottom: 5px;
+  border-bottom: thin solid black; }
+
+body.has-hero nav .current_page_parent > a,
+body.has-hero nav .current-menu-item > a,
+body.has-hero nav .current-menu-parent > a {
+  border-color: white; }
+  body.has-hero nav .current_page_parent > a:hover, body.has-hero nav .current_page_parent > a:focus,
+  body.has-hero nav .current-menu-item > a:hover,
+  body.has-hero nav .current-menu-item > a:focus,
+  body.has-hero nav .current-menu-parent > a:hover,
+  body.has-hero nav .current-menu-parent > a:focus {
+    border-bottom: thin solid white; }
 
 nav .sub-menu {
   -webkit-transition: 0.2s;
@@ -1006,6 +1021,8 @@ nav .sub-menu {
     nav .sub-menu li:last-child a {
       border-bottom: none;
       border-radius: 0 0 4px 4px; }
+    nav .sub-menu li.current-menu-item {
+      background-color: #f3f4f5; }
 
 nav li.menu-item-has-children:hover .sub-menu {
   -webkit-transition: 0.2s;
@@ -1132,9 +1149,13 @@ nav li.menu-item-has-children:hover .sub-menu {
     .slider-controls .arrow.arrow-left {
       left: 0;
       margin-left: 2em; }
+      .slider-controls .arrow.arrow-left:hover, .slider-controls .arrow.arrow-left:focus {
+        margin-left: 1.5em; }
     .slider-controls .arrow.arrow-right {
       right: 0;
       margin-right: 2em; }
+      .slider-controls .arrow.arrow-right:hover, .slider-controls .arrow.arrow-right:focus {
+        margin-right: 1.5em; }
 
 .section-slider .section-content .slider-controls {
   -webkit-transition: 0.3s;
@@ -1163,6 +1184,7 @@ section {
     clear: both; }
   section .section-header {
     max-width: 700px;
+    margin: auto;
     margin-bottom: 4.6875rem; }
 
 section.hero {
@@ -1386,6 +1408,11 @@ body.single-post article {
   margin: 0 auto; }
   body.single-post article header {
     margin-bottom: 50px; }
+  body.single-post article section {
+    padding: 25px 0; }
+  body.single-post article section.module {
+    width: 150%;
+    margin-left: -25%; }
 
 body.single-post article header .post-categories {
   float: left; }
@@ -1403,6 +1430,10 @@ body.single-post article header h1,
 body.single-post article header h2 {
   clear: both; }
 
+@media only screen and (max-width: 1000px) {
+  body.single-post article section.module {
+    width: 100%;
+    margin-left: 0; } }
 button,
 .button {
   -webkit-transition: 0.2s;
@@ -1697,47 +1728,58 @@ section.image .section-body.is-pos-right {
 
 h1.is-italic, h2.is-italic, p.is-italic, span.is-italic,
 time.is-italic,
-button.is-italic, a.is-italic {
+button.is-italic,
+figcaption.is-italic, a.is-italic {
   font-style: italic; }
 h1.is-underlined, h2.is-underlined, p.is-underlined, span.is-underlined,
 time.is-underlined,
-button.is-underlined, a.is-underlined {
+button.is-underlined,
+figcaption.is-underlined, a.is-underlined {
   text-decoration: underline; }
 h1.is-capitalized, h2.is-capitalized, p.is-capitalized, span.is-capitalized,
 time.is-capitalized,
-button.is-capitalized, a.is-capitalized {
+button.is-capitalized,
+figcaption.is-capitalized, a.is-capitalized {
   text-transform: capitalize; }
 h1.is-uppercase, h2.is-uppercase, p.is-uppercase, span.is-uppercase,
 time.is-uppercase,
-button.is-uppercase, a.is-uppercase {
+button.is-uppercase,
+figcaption.is-uppercase, a.is-uppercase {
   text-transform: uppercase; }
 h1.is-lowercase, h2.is-lowercase, p.is-lowercase, span.is-lowercase,
 time.is-lowercase,
-button.is-lowercase, a.is-lowercase {
+button.is-lowercase,
+figcaption.is-lowercase, a.is-lowercase {
   text-transform: lowercase; }
 h1.is-bold, h2.is-bold, p.is-bold, span.is-bold,
 time.is-bold,
-button.is-bold, a.is-bold {
+button.is-bold,
+figcaption.is-bold, a.is-bold {
   font-weight: 700; }
 h1.is-aligned-center, h2.is-aligned-center, p.is-aligned-center, span.is-aligned-center,
 time.is-aligned-center,
-button.is-aligned-center, a.is-aligned-center {
+button.is-aligned-center,
+figcaption.is-aligned-center, a.is-aligned-center {
   text-align: center; }
 h1.is-aligned-left, h2.is-aligned-left, p.is-aligned-left, span.is-aligned-left,
 time.is-aligned-left,
-button.is-aligned-left, a.is-aligned-left {
+button.is-aligned-left,
+figcaption.is-aligned-left, a.is-aligned-left {
   text-align: left; }
 h1.is-aligned-right, h2.is-aligned-right, p.is-aligned-right, span.is-aligned-right,
 time.is-aligned-right,
-button.is-aligned-right, a.is-aligned-right {
+button.is-aligned-right,
+figcaption.is-aligned-right, a.is-aligned-right {
   text-align: right; }
 h1.is-black, h2.is-black, p.is-black, span.is-black,
 time.is-black,
-button.is-black, a.is-black {
+button.is-black,
+figcaption.is-black, a.is-black {
   color: black; }
 h1.is-white, h2.is-white, p.is-white, span.is-white,
 time.is-white,
-button.is-white, a.is-white {
+button.is-white,
+figcaption.is-white, a.is-white {
   color: white; }
 
 p.is-small {

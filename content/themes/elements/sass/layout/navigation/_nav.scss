@@ -13,9 +13,28 @@ nav > ul{
 }
 
 // Current item
-nav ul{
-  li.current{
-    text-decoration: underline;
+nav .current_page_parent,
+nav .current-menu-item,
+nav .current-menu-parent{
+  > a{
+    padding-bottom: 5px;
+
+    border-bottom: thin solid $black;
+  }
+}
+
+body.has-hero{
+  nav .current_page_parent,
+  nav .current-menu-item,
+  nav .current-menu-parent{
+    > a{
+      border-color: $white;
+
+      &:hover,
+      &:focus{
+        border-bottom: thin solid $white;
+      }
+    }
   }
 }
 
@@ -74,6 +93,10 @@ nav .sub-menu{
     &:last-child a{
       border-bottom: none;
       border-radius: 0 0 4px 4px;
+    }
+
+    &.current-menu-item{
+      background-color: $grey-light;
     }
   }
 }

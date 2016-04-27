@@ -1,15 +1,11 @@
 <?php
-// Options (variables)
-$o_b_width = get_sub_field( 'image_o_b_width' );
-$o_b_pos = get_sub_field( 'image_o_b_pos' );
-
 // Content (variables)
 $image = get_sub_field( 'image_b_image' );
 $caption = get_sub_field( 'image_b_caption' );
 
 // Classes
-$class_section = 'image is-' . $o_b_width;
-$class_body = 'section-body is-pos-' . $o_b_pos;
+$class_section = 'image';
+$class_body = 'section-body';
 
 // Build section
 section_start( $class_section );
@@ -26,7 +22,7 @@ section_start( $class_section );
       echo '<img src="' . $image['sizes']['large'] . '" width="' . $image['width'] . '" height="' . $image['height'] . '">';
 
       if( $caption )
-        echo '<figcaption><p class="is-small is-italic">' . $caption . '</p></figcaption>';
+        echo '<figcaption>' . $caption . '</figcaption>';
 
     echo '</figure>';
 
