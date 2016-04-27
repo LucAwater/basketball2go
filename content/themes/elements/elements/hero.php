@@ -1,13 +1,7 @@
 <?php
-// Options (variables)
-$o_b_textColor = get_field( 'hero_o_b_textColor' );
-
 // Content (variables)
 $banner = get_field( 'hero_banner' );
-
-$b_image = get_field( 'hero_b_image' );
 $b_title = get_field( 'hero_b_title' );
-$b_text = preg_replace( '/<p>/', '<h1>', get_field( 'hero_b_text' ) );
 
 // Classes
 $class_section = 'hero';
@@ -22,23 +16,9 @@ $class_body = 'section-body';
        height="<?php echo $banner['height']; ?>">
   </div>
 
-  <?php if( $b_image || $b_title || $b_text ): ?>
+  <?php if( $b_title ): ?>
     <div class="<?php echo $class_body; ?>">
-      <?php
-      if( $b_image ):
-        echo '<img src="' . $b_image['sizes']['medium'] . '" width="' . $b_image['width'] . '" height="' .   $b_image['height'] . '">';
-      endif;
-
-      // Title
-      if( $b_title ):
-        echo '<h1 class="is-' . $o_b_textColor . '">' . $b_title . '</h1>';
-      endif;
-
-      // Text
-      if( $b_text ):
-        echo $b_text;
-      endif;
-      ?>
+      <h1><?php echo $b_title; ?></h1>
     </div>
   <?php endif; ?>
 
