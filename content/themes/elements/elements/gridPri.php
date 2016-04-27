@@ -8,6 +8,7 @@ $b_images = get_sub_field( 'gridPri_b_images' );
 $class_section = 'grid grid-pri';
 $class_header = 'section-header';
 $class_body = 'section-body';
+$class_grid = 's-grid-1 m-grid-2 l-grid-4 row';
 
 // Build section
 section_start( $class_section );
