@@ -20,11 +20,13 @@ a.has-content{
 }
 
 // Links in articles
-article a{
-  border-bottom: thin solid $grey-text;
+article section.text a{
+  color: $primary;
+  border-bottom: thin solid $primary;
 
   &:hover,
   &:focus{
+    color: $black;
     border-color: $black;
   }
 }

@@ -4,7 +4,10 @@ body.single-post{
     margin: 0 auto;
 
     header{
-      margin-bottom: 50px;
+      padding-bottom: 50px;
+      margin-bottom: 35px;
+
+      border-bottom: thin solid $grey;
 
       h1{
         margin-bottom: 15px;

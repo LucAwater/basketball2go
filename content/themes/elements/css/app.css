@@ -745,7 +745,7 @@ ul {
 h1, h2, h3, p, span,
 time,
 button,
-figcaption, a {
+figcaption, small, a {
   font-family: "Gotham A", "Gotham B";
   font-style: normal;
   font-weight: 400;
@@ -767,7 +767,8 @@ h2 {
 h3 {
   font-size: 24px;
   font-weight: 500;
-  line-height: 1.8; }
+  line-height: 1;
+  margin-bottom: 10px; }
 
 p {
   font-size: 14px;
@@ -788,6 +789,9 @@ figcaption {
   font-size: 12px;
   font-style: italic; }
 
+small {
+  font-size: 12px; }
+
 a {
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
@@ -805,9 +809,11 @@ a.has-content {
   color: black;
   text-decoration: none; }
 
-article a {
-  border-bottom: thin solid #888888; }
-  article a:hover, article a:focus {
+article section.text a {
+  color: #f27041;
+  border-bottom: thin solid #f27041; }
+  article section.text a:hover, article section.text a:focus {
+    color: black;
     border-color: black; }
 
 nav a {
@@ -892,11 +898,23 @@ body.has-hero > header .link-logo img:nth-child(2) {
 
 body > footer {
   z-index: 1100;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background: black; }
-  body > footer p, body > footer a {
-    color: white; }
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+  background: #f3f4f5; }
+  body > footer img {
+    max-width: 300px;
+    margin-bottom: 30px; }
+  body > footer nav ul {
+    display: inline-block;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: thin solid #aaaaaa; }
+    body > footer nav ul li {
+      display: inline-block;
+      padding: 0 15px !important; }
+  body > footer small {
+    color: #888888; }
 
 body.error404 #error404-content {
   max-width: 800px;
@@ -1246,7 +1264,7 @@ section.hero {
   section.hero > a {
     left: 3.75rem; } }
 section.text .section-header {
-  margin-bottom: 15px; }
+  margin-bottom: 0; }
 section.text .section-body {
   max-width: 700px;
   margin: auto; }
@@ -1413,7 +1431,9 @@ body.single-post article {
   max-width: 900px;
   margin: 0 auto; }
   body.single-post article header {
-    margin-bottom: 50px; }
+    padding-bottom: 50px;
+    margin-bottom: 35px;
+    border-bottom: thin solid #e0e0e0; }
     body.single-post article header h1 {
       margin-bottom: 15px; }
   body.single-post article section {
@@ -1737,57 +1757,57 @@ section.image .section-body.is-pos-right {
 h1.is-italic, h2.is-italic, h3.is-italic, p.is-italic, span.is-italic,
 time.is-italic,
 button.is-italic,
-figcaption.is-italic, a.is-italic {
+figcaption.is-italic, small.is-italic, a.is-italic {
   font-style: italic; }
 h1.is-underlined, h2.is-underlined, h3.is-underlined, p.is-underlined, span.is-underlined,
 time.is-underlined,
 button.is-underlined,
-figcaption.is-underlined, a.is-underlined {
+figcaption.is-underlined, small.is-underlined, a.is-underlined {
   text-decoration: underline; }
 h1.is-capitalized, h2.is-capitalized, h3.is-capitalized, p.is-capitalized, span.is-capitalized,
 time.is-capitalized,
 button.is-capitalized,
-figcaption.is-capitalized, a.is-capitalized {
+figcaption.is-capitalized, small.is-capitalized, a.is-capitalized {
   text-transform: capitalize; }
 h1.is-uppercase, h2.is-uppercase, h3.is-uppercase, p.is-uppercase, span.is-uppercase,
 time.is-uppercase,
 button.is-uppercase,
-figcaption.is-uppercase, a.is-uppercase {
+figcaption.is-uppercase, small.is-uppercase, a.is-uppercase {
   text-transform: uppercase; }
 h1.is-lowercase, h2.is-lowercase, h3.is-lowercase, p.is-lowercase, span.is-lowercase,
 time.is-lowercase,
 button.is-lowercase,
-figcaption.is-lowercase, a.is-lowercase {
+figcaption.is-lowercase, small.is-lowercase, a.is-lowercase {
   text-transform: lowercase; }
 h1.is-bold, h2.is-bold, h3.is-bold, p.is-bold, span.is-bold,
 time.is-bold,
 button.is-bold,
-figcaption.is-bold, a.is-bold {
+figcaption.is-bold, small.is-bold, a.is-bold {
   font-weight: 700; }
 h1.is-aligned-center, h2.is-aligned-center, h3.is-aligned-center, p.is-aligned-center, span.is-aligned-center,
 time.is-aligned-center,
 button.is-aligned-center,
-figcaption.is-aligned-center, a.is-aligned-center {
+figcaption.is-aligned-center, small.is-aligned-center, a.is-aligned-center {
   text-align: center; }
 h1.is-aligned-left, h2.is-aligned-left, h3.is-aligned-left, p.is-aligned-left, span.is-aligned-left,
 time.is-aligned-left,
 button.is-aligned-left,
-figcaption.is-aligned-left, a.is-aligned-left {
+figcaption.is-aligned-left, small.is-aligned-left, a.is-aligned-left {
   text-align: left; }
 h1.is-aligned-right, h2.is-aligned-right, h3.is-aligned-right, p.is-aligned-right, span.is-aligned-right,
 time.is-aligned-right,
 button.is-aligned-right,
-figcaption.is-aligned-right, a.is-aligned-right {
+figcaption.is-aligned-right, small.is-aligned-right, a.is-aligned-right {
   text-align: right; }
 h1.is-black, h2.is-black, h3.is-black, p.is-black, span.is-black,
 time.is-black,
 button.is-black,
-figcaption.is-black, a.is-black {
+figcaption.is-black, small.is-black, a.is-black {
   color: black; }
 h1.is-white, h2.is-white, h3.is-white, p.is-white, span.is-white,
 time.is-white,
 button.is-white,
-figcaption.is-white, a.is-white {
+figcaption.is-white, small.is-white, a.is-white {
   color: white; }
 
 p.is-small {
