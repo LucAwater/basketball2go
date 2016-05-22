@@ -776,7 +776,6 @@ p {
 article p,
 section.text p {
   margin-bottom: 1em;
-  font-size: 16px;
   line-height: 1.6; }
 
 span,
@@ -1246,13 +1245,19 @@ section.hero {
     padding: 3.75rem; }
   section.hero > a {
     left: 3.75rem; } }
+section.text .section-header {
+  margin-bottom: 15px; }
 section.text .section-body {
   max-width: 700px;
   margin: auto; }
-  section.text .section-body h2,
+  section.text .section-body h3,
   section.text .section-body p,
   section.text .section-body a {
     margin-bottom: 1em; }
+    section.text .section-body h3:last-child,
+    section.text .section-body p:last-child,
+    section.text .section-body a:last-child {
+      margin-bottom: 0; }
 
 section.image .section-body figure {
   display: inline-block;
@@ -1412,7 +1417,7 @@ body.single-post article {
     body.single-post article header h1 {
       margin-bottom: 15px; }
   body.single-post article section {
-    padding: 25px 0; }
+    padding: 15px 0; }
   body.single-post article section.module {
     width: 150%;
     margin-left: -25%; }

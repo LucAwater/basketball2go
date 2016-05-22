@@ -1,12 +1,20 @@
 section.text{
+  .section-header{
+    margin-bottom: 15px;
+  }
+
   .section-body{
     max-width: 700px;
     margin: auto;
 
-    h2,
+    h3,
     p,
     a{
       margin-bottom: 1em;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
     }
   }
 }

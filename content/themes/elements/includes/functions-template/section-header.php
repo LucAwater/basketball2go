@@ -19,7 +19,7 @@ function section_header_text( $class_header, $h_title ) {
     echo '<div class="' . $class_header . '">';
 
       // Header title
-      echo ( $h_title ) ? '<h2>' . $h_title . '</h2>' : '';
+      echo ( $h_title ) ? '<h3>' . $h_title . '</h3>' : '';
 
     echo '</div>';
   }
