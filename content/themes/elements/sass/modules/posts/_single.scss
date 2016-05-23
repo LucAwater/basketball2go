@@ -1,13 +1,10 @@
 body.single-post{
   article{
-    max-width: 900px;
-    margin: 0 auto;
-
     header{
       padding-bottom: 50px;
       margin-bottom: 35px;
 
-      border-bottom: thin solid $grey;
+      text-align: center;
 
       h1{
         margin-bottom: 15px;
@@ -15,6 +12,8 @@ body.single-post{
     }
 
     section{
+      max-width: 900px;
+      margin: 0 auto;
       padding: 15px 0;
     }
 
@@ -27,7 +26,7 @@ body.single-post{
 
 body.single-post article header{
   .post-categories{
-    float: left;
+    display: inline-block;
 
     a{
       border: none;
@@ -43,7 +42,11 @@ body.single-post article header{
   }
 
   time{
-    float: right;
+    padding-left: 15px;
+
+    span{
+      padding-right: 15px;
+    }
   }
 
   h1{

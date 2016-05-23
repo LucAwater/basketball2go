@@ -1427,23 +1427,22 @@ ul.posts li img {
   display: block;
   margin-top: -185px; }
 
-body.single-post article {
+body.single-post article header {
+  padding-bottom: 50px;
+  margin-bottom: 35px;
+  text-align: center; }
+  body.single-post article header h1 {
+    margin-bottom: 15px; }
+body.single-post article section {
   max-width: 900px;
-  margin: 0 auto; }
-  body.single-post article header {
-    padding-bottom: 50px;
-    margin-bottom: 35px;
-    border-bottom: thin solid #e0e0e0; }
-    body.single-post article header h1 {
-      margin-bottom: 15px; }
-  body.single-post article section {
-    padding: 15px 0; }
-  body.single-post article section.module {
-    width: 150%;
-    margin-left: -25%; }
+  margin: 0 auto;
+  padding: 15px 0; }
+body.single-post article section.module {
+  width: 150%;
+  margin-left: -25%; }
 
 body.single-post article header .post-categories {
-  float: left; }
+  display: inline-block; }
   body.single-post article header .post-categories a {
     border: none; }
   body.single-post article header .post-categories span {
@@ -1451,7 +1450,9 @@ body.single-post article header .post-categories {
   body.single-post article header .post-categories span:last-child {
     display: none; }
 body.single-post article header time {
-  float: right; }
+  padding-left: 15px; }
+  body.single-post article header time span {
+    padding-right: 15px; }
 body.single-post article header h1 {
   padding-top: 15px; }
 body.single-post article header h1,
