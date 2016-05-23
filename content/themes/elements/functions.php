@@ -5,6 +5,7 @@
 
 // Includes
 require_once('includes/scripts.php');
+require_once('includes/acf-layout-title.php');
 
 // Inludes: template functions
 require_once('includes/functions-template/elements.php');
