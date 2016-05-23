@@ -10,7 +10,9 @@ $thumb = get_the_post_thumbnail( $post->ID, 'medium' );
 ?>
 
 <li>
-  <a class="post-title" href="<?php echo $permalink; ?>"><h3><?php echo $title; ?></h3></a>
+  <div>
+    <a class="post-title" href="<?php echo $permalink; ?>"><h3><?php echo $title; ?></h3></a>
 
-  <?php echo $thumb; ?>
+    <?php echo $thumb; ?>
+  </div>
 </li>
