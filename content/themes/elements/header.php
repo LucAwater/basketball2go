@@ -62,7 +62,7 @@ $hero_elements = array_filter($hero_elements);
       <img src="<?php echo bloginfo( 'template_directory' ); ?>/img/logo-black.svg">
     </a>
 
-    <nav>
+    <nav class="is-active">
       <ul>
         <?php
         $nav = array(
@@ -74,7 +74,7 @@ $hero_elements = array_filter($hero_elements);
         wp_nav_menu( $nav );
         ?>
 
-        <li><button class="button-sec">Contact</button></li>
+        <li><button class="button button-sec">Contact</button></li>
       </ul>
     </nav>
   </header>

@@ -1,106 +1,184 @@
-nav > ul{
-  display: inline;
+@media screen and (min-width: 900px){
+  nav > ul{
+    display: inline;
 
-  > li{
-    display: inline-block;
-    padding: 0 25px 30px;
-    margin-bottom: -30px;
+    > li{
+      display: inline-block;
+      padding: 0 25px 30px;
+      margin-bottom: -30px;
 
-    &:last-child{
-      padding-right: 0;
+      &:last-child{
+        padding-right: 0;
+      }
     }
   }
-}
 
-// Current item
-nav .current_page_parent,
-nav .current-menu-item,
-nav .current-menu-parent{
-  > a{
-    padding-bottom: 5px;
-
-    border-bottom: thin solid $black;
-  }
-}
-
-body.has-hero{
+  // Current item
   nav .current_page_parent,
   nav .current-menu-item,
   nav .current-menu-parent{
     > a{
-      border-color: $white;
+      padding-bottom: 5px;
 
-      &:hover,
-      &:focus{
-        border-bottom: thin solid $white;
+      border-bottom: thin solid $black;
+    }
+  }
+
+  body.has-hero{
+    nav .current_page_parent,
+    nav .current-menu-item,
+    nav .current-menu-parent{
+      > a{
+        border-color: $white;
+
+        &:hover,
+        &:focus{
+          border-bottom: thin solid $white;
+        }
       }
     }
   }
-}
 
-// Sub menu
-nav .sub-menu{
-  @include hide( .2s );
-  @include box-shadow( 0 3px 10px rgba(0,0,0,.1) );
+  // Sub menu
+  nav .sub-menu{
+    @include hide( .2s );
+    @include box-shadow( 0 3px 10px rgba(0,0,0,.1) );
 
-  position: absolute;
-
-  margin: 30px 0 0 -15px;
-
-  border-radius: 4px;
-  background-color: $white;
-
-  &:before{
-    @include transform( rotate(45deg) );
-
-    content: "";
-
-    top: -8px;
-    left: 15px;
     position: absolute;
 
-    width: 18px;
-    height: 18px;
+    margin: 30px 0 0 -15px;
 
-    border-radius: 2px;
+    border-radius: 4px;
     background-color: $white;
-  }
 
-  li{
-    width: 100%;
-    padding-right: 0;
+    &:before{
+      @include transform( rotate(45deg) );
 
-    a{
+      content: "";
+
+      top: -8px;
+      left: 15px;
+      position: absolute;
+
+      width: 18px;
+      height: 18px;
+
+      border-radius: 2px;
+      background-color: $white;
+    }
+
+    li{
       width: 100%;
-      padding: 15px;
-      display: block;
+      padding-right: 0;
 
-      color: $black;
-      cursor: pointer;
-      white-space: nowrap;
-      border-bottom: thin solid $grey-light;
+      a{
+        width: 100%;
+        padding: 15px;
+        display: block;
 
-      &:hover,
-      &:focus{
+        color: $black;
+        cursor: pointer;
+        white-space: nowrap;
+        border-bottom: thin solid $grey-light;
+
+        &:hover,
+        &:focus{
+          background-color: $grey-light;
+        }
+      }
+
+      &:first-child a{
+        border-radius: 4px 4px 0 0;
+      }
+
+      &:last-child a{
+        border-bottom: none;
+        border-radius: 0 0 4px 4px;
+      }
+
+      &.current-menu-item{
         background-color: $grey-light;
       }
     }
+  }
 
-    &:first-child a{
-      border-radius: 4px 4px 0 0;
-    }
-
-    &:last-child a{
-      border-bottom: none;
-      border-radius: 0 0 4px 4px;
-    }
-
-    &.current-menu-item{
-      background-color: $grey-light;
-    }
+  nav li.menu-item-has-children:hover .sub-menu{
+    @include show( .2s );
   }
 }
 
-nav li.menu-item-has-children:hover .sub-menu{
-  @include show( .2s );
+
+@media screen and (max-width: 900px){
+  header nav{
+    @include transition( .2s );
+    @include transform( translateX(100%) );
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: 80%;
+    max-width: 400px;
+    height: 100%;
+
+    background-color: $white;
+
+    &.is-active{
+      @include transform( translateX(0) );
+      @include box-shadow( 0 0px 50px rgba(0,0,0,.5) );
+    }
+
+    > ul{
+      display: block;
+      padding: 30px;
+
+      > li{
+        display: block;
+
+        text-align: right;
+        border-bottom: thin solid $grey;
+
+        a{
+          display: block;
+          padding: 15px;
+
+          font-size: 18px;
+          border-bottom: none;
+          color: $black !important;
+
+          &:hover,
+          &:focus{
+            background-color: $grey-light;
+            border-bottom: none !important;
+          }
+        }
+
+        .button{
+          padding: 0 15px;
+          margin: 15px 0;
+        }
+
+        &:last-child{
+          border-bottom: none;
+        }
+
+        .sub-menu{
+          padding-bottom: 15px;
+
+          li{
+            a{
+              padding: 5px 15px;
+              font-size: 14px;
+
+              &:hover,
+              &:focus{
+                background-color: $grey-light;
+                border-bottom: none !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
