@@ -41,6 +41,8 @@ function get_elements(){
         get_template_part( 'elements/gridPri' );
       elseif( get_row_layout() == 'slider' ):
         get_template_part( 'elements/slider' );
+      elseif( get_row_layout() == 'map' ):
+        get_template_part( 'elements/map' );
       endif;
 
     endwhile;

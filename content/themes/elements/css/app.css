@@ -1396,21 +1396,15 @@ section.grid ul.isotope-masonry li:nth-child(n) {
 @media screen and (min-width: 1400px) {
   section.grid ul li {
     width: 25%; } }
-section.parallax .section-body,
-.bcg {
-  height: 0;
-  padding-bottom: 50% !important; }
-
-.section-parallax {
+.acf-map {
   width: 100%;
-  z-index: 1000; }
+  height: 300px;
+  border: #ccc solid 1px;
+  margin: 20px 0; }
 
-.bcg {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  width: 100%; }
+/* fixes potential theme css conflict */
+.acf-map img {
+  max-width: inherit !important; }
 
 ul.posts li div {
   padding: 15px 30px;
@@ -1434,7 +1428,7 @@ body.single-post article header {
   body.single-post article header h1 {
     margin-bottom: 15px; }
 body.single-post article section {
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 15px 0; }
 body.single-post article section.module {
