@@ -64,9 +64,9 @@ $hero_elements = array_filter($hero_elements);
 
     <a class="nav-open"></a>
 
-    <nav class="is-active">
+    <nav>
       <span class="nav-close"><a></a></span>
-      
+
       <ul>
         <?php
         $nav = array(

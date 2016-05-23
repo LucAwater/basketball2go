@@ -880,7 +880,7 @@ body > header {
   -moz-justify-content: space-between;
   justify-content: space-between;
   position: absolute;
-  z-index: 1100;
+  z-index: 1200;
   width: 100%;
   height: 100px;
   background-color: transparent; }
@@ -1174,6 +1174,10 @@ body.has-hero .nav-open {
             header nav > ul > li .sub-menu li a:hover, header nav > ul > li .sub-menu li a:focus {
               background-color: #f3f4f5;
               border-bottom: none !important; } }
+@media only screen and (max-width: 500px) {
+  header nav > ul,
+  header nav .nav-close {
+    padding: 0 1.875rem; } }
 .arrow {
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);

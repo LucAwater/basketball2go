@@ -258,3 +258,12 @@ body.has-hero .nav-open{
     }
   }
 }
+
+@media #{$small-only}{
+  header nav{
+    > ul,
+    .nav-close{
+      padding: 0 $space-sides-small;
+    }
+  }
+}
