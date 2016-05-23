@@ -62,7 +62,11 @@ $hero_elements = array_filter($hero_elements);
       <img src="<?php echo bloginfo( 'template_directory' ); ?>/img/logo-black.svg">
     </a>
 
+    <a class="nav-open"></a>
+
     <nav class="is-active">
+      <span class="nav-close"><a></a></span>
+      
       <ul>
         <?php
         $nav = array(
