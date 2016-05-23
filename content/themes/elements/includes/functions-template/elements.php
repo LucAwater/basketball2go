@@ -4,7 +4,8 @@
  *
  * Important: wpe-acf.json must be imported in order to use this function.
  */
-function get_elements(){
+function get_elements_hero(){
+
   /*
    * Check for hero fields
    */
@@ -20,6 +21,10 @@ function get_elements(){
   if (!empty($hero_elements)) {
     get_template_part( 'elements/hero' );
   }
+
+}
+
+function get_elements(){
 
   /*
    * Start the ACF page elements loop
@@ -47,5 +52,6 @@ function get_elements(){
 
     endwhile;
   endif;
+
 }
 ?>

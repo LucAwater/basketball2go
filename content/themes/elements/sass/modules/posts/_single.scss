@@ -1,29 +1,3 @@
-body.single-post{
-  article{
-    header{
-      padding-bottom: 50px;
-      margin-bottom: 35px;
-
-      text-align: center;
-
-      h1{
-        margin-bottom: 15px;
-      }
-    }
-
-    section{
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 15px 0;
-    }
-
-    section.module{
-      width: 150%;
-      margin-left: -25%;
-    }
-  }
-}
-
 body.single-post article header{
   .post-categories{
     display: inline-block;

@@ -1088,6 +1088,20 @@ nav li.menu-item-has-children:hover .sub-menu {
     z-index: 1100;
     margin: auto; }
 
+article header {
+  padding-bottom: 50px;
+  margin-bottom: 35px;
+  text-align: center; }
+  article header h1 {
+    margin-bottom: 15px; }
+article section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 15px 0; }
+article section.module {
+  width: 150%;
+  margin-left: -25%; }
+
 .slider {
   position: relative; }
 
@@ -1222,8 +1236,7 @@ section.hero {
   height: 100vh;
   padding: 0;
   overflow: hidden;
-  margin-top: 0;
-  margin-bottom: 4.6875rem; }
+  margin-top: 0; }
   section.hero .hero-banner {
     position: absolute;
     width: 100%;
@@ -1421,20 +1434,6 @@ ul.posts li {
       width: 100%;
       height: auto;
       margin-top: -185px; }
-
-body.single-post article header {
-  padding-bottom: 50px;
-  margin-bottom: 35px;
-  text-align: center; }
-  body.single-post article header h1 {
-    margin-bottom: 15px; }
-body.single-post article section {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 15px 0; }
-body.single-post article section.module {
-  width: 150%;
-  margin-left: -25%; }
 
 body.single-post article header .post-categories {
   display: inline-block; }
