@@ -25,6 +25,8 @@ section.hero{
     padding: $space-sides;
 
     h1{
+      @include font-smoothing( antialiased );
+      
       color: $white;
     }
   }
