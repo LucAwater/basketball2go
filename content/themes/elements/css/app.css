@@ -898,8 +898,8 @@ body.has-hero > header .link-logo img:nth-child(2) {
 
 body > footer {
   z-index: 1100;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   text-align: center;
   background: #f3f4f5; }
   body > footer img {
