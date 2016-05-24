@@ -1622,6 +1622,7 @@ button,
   border-radius: 4px;
   border: thin solid #f27041;
   background-color: #f27041;
+  line-height: 29px;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -1634,11 +1635,11 @@ button,
     background-color: #ef4c11; }
 
 .button-sec {
-  color: #f27041;
+  color: #f27041 !important;
   background-color: transparent;
-  border: thin solid #f27041; }
+  border: thin solid #f27041 !important; }
   .button-sec:hover, .button-sec:focus {
-    color: white;
+    color: white !important;
     border-color: #f27041;
     background-color: #f27041; }
 

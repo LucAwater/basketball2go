@@ -26,6 +26,7 @@ button,
   border: thin solid $primary;
   background-color: $primary;
 
+  line-height: 29px;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -40,13 +41,13 @@ button,
 }
 
 .button-sec{
-  color: $primary;
+  color: $primary !important;
   background-color: transparent;
-  border: thin solid $primary;
+  border: thin solid $primary !important;
 
   &:hover,
   &:focus{
-    color: $white;
+    color: $white !important;
     border-color: $primary;
     background-color: $primary;
   }
