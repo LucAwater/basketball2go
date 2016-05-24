@@ -992,6 +992,11 @@ a.trigger-menu:focus i:before {
     body.has-hero nav .current-menu-parent > a:hover,
     body.has-hero nav .current-menu-parent > a:focus {
       border-bottom: thin solid white; }
+  body.has-hero nav > ul > li > a {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+    font-weight: 500;
+    font-size: 16px; }
 
   nav .sub-menu {
     -webkit-transition: 0.2s;
