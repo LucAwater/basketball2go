@@ -818,6 +818,7 @@ article section.text a {
 
 nav a {
   padding-bottom: 5px;
+  font-size: 16px;
   color: black;
   text-decoration: none;
   border-bottom: thin dotted transparent; }
@@ -882,10 +883,10 @@ body > header {
   position: absolute;
   z-index: 1200;
   width: 100%;
-  height: 100px;
+  height: 120px;
   background-color: transparent; }
   body > header .link-logo {
-    width: 120px; }
+    width: 150px; }
     body > header .link-logo img:first-child {
       display: none; }
     body > header .link-logo img:nth-child(2) {
@@ -995,8 +996,7 @@ a.trigger-menu:focus i:before {
   body.has-hero nav > ul > li > a {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: antialiased;
-    font-weight: 500;
-    font-size: 16px; }
+    font-weight: 500; }
 
   nav .sub-menu {
     -webkit-transition: 0.2s;
@@ -1222,7 +1222,6 @@ body.has-hero .nav-open {
 
 article header {
   padding-bottom: 50px;
-  margin-bottom: 35px;
   text-align: center; }
   article header h1 {
     margin-bottom: 15px; }
@@ -1578,23 +1577,25 @@ ul.posts li {
 body.single-post section {
   padding: 15px 0; }
 
-body.single-post article header .post-categories {
-  display: inline-block; }
-  body.single-post article header .post-categories a {
-    border: none; }
-  body.single-post article header .post-categories span {
-    color: #888888; }
-  body.single-post article header .post-categories span:last-child {
-    display: none; }
-body.single-post article header time {
-  padding-left: 15px; }
-  body.single-post article header time span {
-    padding-right: 15px; }
-body.single-post article header h1 {
-  padding-top: 15px; }
-body.single-post article header h1,
-body.single-post article header h2 {
-  clear: both; }
+body.single-post article header {
+  padding-top: 50px; }
+  body.single-post article header .post-categories {
+    display: inline-block; }
+    body.single-post article header .post-categories a {
+      border: none; }
+    body.single-post article header .post-categories span {
+      color: #888888; }
+    body.single-post article header .post-categories span:last-child {
+      display: none; }
+  body.single-post article header time {
+    padding-left: 15px; }
+    body.single-post article header time span {
+      padding-right: 15px; }
+  body.single-post article header h1 {
+    padding-top: 15px; }
+  body.single-post article header h1,
+  body.single-post article header h2 {
+    clear: both; }
 
 @media only screen and (max-width: 1000px) {
   body.single-post article section.module {
