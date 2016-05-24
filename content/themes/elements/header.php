@@ -78,7 +78,7 @@ $hero_elements = array_filter($hero_elements);
         wp_nav_menu( $nav );
         ?>
 
-        <li><a class="button button-sec">Contact</a></li>
+        <li><a class="button button-sec" href="<?php echo home_url(); ?>/contact">Contact</a></li>
       </ul>
     </nav>
   </header>
