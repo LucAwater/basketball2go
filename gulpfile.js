@@ -16,6 +16,7 @@ gulp.task('minify-js', function () {
 
       './content/themes/elements/js/scroll.js',
       './content/themes/elements/js/hero.js',
+      './content/themes/elements/js/nav.js',
       './content/themes/elements/js/init-slider.js',
       './content/themes/elements/js/init-isotope.js',
       './content/themes/elements/js/init-skrollr.js',
@@ -35,9 +36,10 @@ gulp.task('concat', function () {
       './content/themes/elements/js/min/slider.js',
       './content/themes/elements/js/min/jquery.mobile.custom.min.js',
       './content/themes/elements/js/min/add-to-cart-variation.min.js',
-
+ 
       './content/themes/elements/js/min/scroll.js',
       './content/themes/elements/js/min/hero.js',
+      './content/themes/elements/js/min/nav.js',
       './content/themes/elements/js/min/init-slider.js',
       './content/themes/elements/js/min/init-isotope.js',
       './content/themes/elements/js/min/init-skrollr.js',

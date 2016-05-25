@@ -1,12 +1,31 @@
 body > footer{
   z-index: $zIndex-footer;
 
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
-  background: $black;
+  text-align: center;
+  background: $grey-light;
 
-  p, a{
-    color: $white;
+  img{
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
+
+  nav ul{
+    display: inline-block;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+
+    border-bottom: thin solid $grey-dark;
+
+    li{
+      display: inline-block;
+      padding: 0 15px !important;
+    }
+  }
+
+  small{
+    color: $grey-text;
   }
 }

@@ -9,7 +9,7 @@ if( have_posts() ):
     $subtitle = get_field( 'post_subtitle' );
     $content = wpautop( get_the_content() );
     $date = get_the_date();
-    $categories = get_categories();
+    $categories = get_the_category();
     ?>
 
     <article>
@@ -25,7 +25,7 @@ if( have_posts() ):
           ?>
         </div>
 
-        <time pubdate><?php echo $date; ?></time>
+        <time pubdate><span>&#149;</span><?php echo $date; ?></time>
 
         <h1 class="is-bold"><?php echo $title; ?></h1>
         <h2><?php echo $subtitle; ?></h2>

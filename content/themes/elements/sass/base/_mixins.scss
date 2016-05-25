@@ -47,3 +47,8 @@
   -moz-box-shadow: $box-shadow;
   -webkit-box-shadow: $box-shadow;
 }
+
+@mixin font-smoothing( $font-smoothing ){
+  -webkit-font-smoothing: $font-smoothing;
+  -moz-osx-font-smoothing: $font-smoothing;
+}

@@ -2,7 +2,7 @@
 function enqueue_theme_scripts() {
   // Unregister standard jQuery and reregister as google code.
   wp_deregister_script('jquery');
-  wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', null, false, true );
+  wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', null, false, false );
   wp_enqueue_script( 'jquery' );
 
   if( WP_DEBUG ):
@@ -12,10 +12,10 @@ function enqueue_theme_scripts() {
     wp_enqueue_script( 'skrollr', get_template_directory_uri() . '/js/vendor/skrollr.js', 'jquery', false, true );
     wp_enqueue_script( 'slider', get_template_directory_uri() . '/js/vendor/slider.js', 'jquery', false, true );
     wp_enqueue_script( 'jquery-mobile', get_template_directory_uri() . '/js/vendor/jquery.mobile.custom.min.js', 'jquery', false, true );
-    wp_enqueue_script( 'add-to-cart', get_template_directory_uri() . '/js/vendor/add-to-cart-variation.min.js', 'jquery', false, true );
 
     wp_enqueue_script( 'scroll', get_template_directory_uri() . '/js/scroll.js', 'jquery', false, true );
     wp_enqueue_script( 'hero', get_template_directory_uri() . '/js/hero.js', 'jquery', false, true );
+    wp_enqueue_script( 'nav', get_template_directory_uri() . '/js/nav.js', 'jquery', false, true );
     wp_enqueue_script( 'init-slider', get_template_directory_uri() . '/js/init-slider.js', 'jquery', false, true );
     wp_enqueue_script( 'init-isotope', get_template_directory_uri() . '/js/init-isotope.js', 'jquery', false, true );
     wp_enqueue_script( 'init-skrollr', get_template_directory_uri() . '/js/init-skrollr.js', 'jquery', false, true );

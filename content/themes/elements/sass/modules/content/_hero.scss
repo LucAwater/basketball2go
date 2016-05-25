@@ -7,7 +7,6 @@ section.hero{
   padding: 0;
   overflow: hidden;
   margin-top: 0;
-  margin-bottom: ($space-section / 2);
 
   .hero-banner{
     position: absolute;
@@ -26,6 +25,8 @@ section.hero{
     padding: $space-sides;
 
     h1{
+      @include font-smoothing( antialiased );
+      
       color: $white;
     }
   }
