@@ -1353,7 +1353,9 @@ section {
   section .section-header {
     max-width: 700px;
     margin: auto;
-    margin-bottom: 4.6875rem; }
+    margin-bottom: 30px; }
+    section .section-header h2 {
+      margin-bottom: 15px; }
 
 section.hero {
   display: -webkit-box;
