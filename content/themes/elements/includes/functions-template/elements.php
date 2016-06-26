@@ -38,6 +38,8 @@ function get_elements(){
         get_template_part( 'elements/quote' );
       elseif( get_row_layout() == 'image' ):
         get_template_part( 'elements/image' );
+      elseif( get_row_layout() == 'video' ):
+        get_template_part( 'elements/video' );
       elseif( get_row_layout() == 'module' ):
         get_template_part( 'elements/module' );
       elseif( get_row_layout() == 'module' ):

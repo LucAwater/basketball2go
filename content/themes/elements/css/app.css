@@ -1432,6 +1432,22 @@ section.image .section-body figure {
   display: inline-block;
   text-align: left; }
 
+section.video .section-body .embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto; }
+section.video .section-body .embed-container iframe,
+section.video .section-body .embed-container object,
+section.video .section-body .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 section.module .section-body {
   display: -webkit-box;
   display: -webkit-flex;
