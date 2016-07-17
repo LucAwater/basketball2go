@@ -967,7 +967,7 @@ a.trigger-menu:hover i:after {
 a.trigger-menu:focus i:before {
   -webkit-animation: activebefore .4s linear; }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1150px) {
   nav > ul {
     display: inline; }
     nav > ul > li {
@@ -1104,7 +1104,7 @@ body.has-hero .nav-open {
       -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg); }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1150px) {
   header .nav-open {
     display: block; }
 
