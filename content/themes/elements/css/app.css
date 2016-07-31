@@ -742,7 +742,7 @@ ul {
   width: calc( 100% + 1.875rem );
   margin-left: -0.9375rem; }
 
-h1, h2, h3, p, span,
+h1, h2, h3, p, article ul li, span,
 time,
 button,
 figcaption, small, a {
@@ -770,7 +770,7 @@ h3 {
   line-height: 1;
   margin-bottom: 10px; }
 
-p {
+p, article ul li {
   font-size: 14px;
   line-height: 1.6; }
 
@@ -1237,6 +1237,13 @@ article section.slider {
   margin: 0 auto; }
 article section.map {
   padding: 0px 0; }
+article ul {
+  margin-bottom: 1em; }
+  article ul li {
+    padding-left: 14px;
+    text-indent: -14px;
+    list-style-type: disc;
+    list-style-position: inside; }
 
 .slider {
   position: relative; }
@@ -1912,57 +1919,57 @@ section.image .section-body.is-pos-center {
 section.image .section-body.is-pos-right {
   text-align: right; }
 
-h1.is-italic, h2.is-italic, h3.is-italic, p.is-italic, span.is-italic,
+h1.is-italic, h2.is-italic, h3.is-italic, p.is-italic, article ul li.is-italic, span.is-italic,
 time.is-italic,
 button.is-italic,
 figcaption.is-italic, small.is-italic, a.is-italic {
   font-style: italic; }
-h1.is-underlined, h2.is-underlined, h3.is-underlined, p.is-underlined, span.is-underlined,
+h1.is-underlined, h2.is-underlined, h3.is-underlined, p.is-underlined, article ul li.is-underlined, span.is-underlined,
 time.is-underlined,
 button.is-underlined,
 figcaption.is-underlined, small.is-underlined, a.is-underlined {
   text-decoration: underline; }
-h1.is-capitalized, h2.is-capitalized, h3.is-capitalized, p.is-capitalized, span.is-capitalized,
+h1.is-capitalized, h2.is-capitalized, h3.is-capitalized, p.is-capitalized, article ul li.is-capitalized, span.is-capitalized,
 time.is-capitalized,
 button.is-capitalized,
 figcaption.is-capitalized, small.is-capitalized, a.is-capitalized {
   text-transform: capitalize; }
-h1.is-uppercase, h2.is-uppercase, h3.is-uppercase, p.is-uppercase, span.is-uppercase,
+h1.is-uppercase, h2.is-uppercase, h3.is-uppercase, p.is-uppercase, article ul li.is-uppercase, span.is-uppercase,
 time.is-uppercase,
 button.is-uppercase,
 figcaption.is-uppercase, small.is-uppercase, a.is-uppercase {
   text-transform: uppercase; }
-h1.is-lowercase, h2.is-lowercase, h3.is-lowercase, p.is-lowercase, span.is-lowercase,
+h1.is-lowercase, h2.is-lowercase, h3.is-lowercase, p.is-lowercase, article ul li.is-lowercase, span.is-lowercase,
 time.is-lowercase,
 button.is-lowercase,
 figcaption.is-lowercase, small.is-lowercase, a.is-lowercase {
   text-transform: lowercase; }
-h1.is-bold, h2.is-bold, h3.is-bold, p.is-bold, span.is-bold,
+h1.is-bold, h2.is-bold, h3.is-bold, p.is-bold, article ul li.is-bold, span.is-bold,
 time.is-bold,
 button.is-bold,
 figcaption.is-bold, small.is-bold, a.is-bold {
   font-weight: 700; }
-h1.is-aligned-center, h2.is-aligned-center, h3.is-aligned-center, p.is-aligned-center, span.is-aligned-center,
+h1.is-aligned-center, h2.is-aligned-center, h3.is-aligned-center, p.is-aligned-center, article ul li.is-aligned-center, span.is-aligned-center,
 time.is-aligned-center,
 button.is-aligned-center,
 figcaption.is-aligned-center, small.is-aligned-center, a.is-aligned-center {
   text-align: center; }
-h1.is-aligned-left, h2.is-aligned-left, h3.is-aligned-left, p.is-aligned-left, span.is-aligned-left,
+h1.is-aligned-left, h2.is-aligned-left, h3.is-aligned-left, p.is-aligned-left, article ul li.is-aligned-left, span.is-aligned-left,
 time.is-aligned-left,
 button.is-aligned-left,
 figcaption.is-aligned-left, small.is-aligned-left, a.is-aligned-left {
   text-align: left; }
-h1.is-aligned-right, h2.is-aligned-right, h3.is-aligned-right, p.is-aligned-right, span.is-aligned-right,
+h1.is-aligned-right, h2.is-aligned-right, h3.is-aligned-right, p.is-aligned-right, article ul li.is-aligned-right, span.is-aligned-right,
 time.is-aligned-right,
 button.is-aligned-right,
 figcaption.is-aligned-right, small.is-aligned-right, a.is-aligned-right {
   text-align: right; }
-h1.is-black, h2.is-black, h3.is-black, p.is-black, span.is-black,
+h1.is-black, h2.is-black, h3.is-black, p.is-black, article ul li.is-black, span.is-black,
 time.is-black,
 button.is-black,
 figcaption.is-black, small.is-black, a.is-black {
   color: black; }
-h1.is-white, h2.is-white, h3.is-white, p.is-white, span.is-white,
+h1.is-white, h2.is-white, h3.is-white, p.is-white, article ul li.is-white, span.is-white,
 time.is-white,
 button.is-white,
 figcaption.is-white, small.is-white, a.is-white {
