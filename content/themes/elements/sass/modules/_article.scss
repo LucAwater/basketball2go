@@ -26,4 +26,16 @@ article{
   section.map{
     padding: 0px 0;
   }
+
+  ul{
+    margin-bottom: 1em;
+
+    li{
+      padding-left: 14px;
+      text-indent: -14px;
+
+      list-style-type: disc;
+      list-style-position: inside;
+    }
+  }
 }
