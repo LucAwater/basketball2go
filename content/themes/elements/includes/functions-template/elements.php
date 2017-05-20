@@ -50,6 +50,8 @@ function get_elements(){
         get_template_part( 'elements/slider' );
       elseif( get_row_layout() == 'map' ):
         get_template_part( 'elements/map' );
+      elseif ( get_row_layout() == 'facebook_embed' ):
+        get_template_part( 'elements/facebook' );
       endif;
 
     endwhile;
