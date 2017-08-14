@@ -1,0 +1,206 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Paypal Advanced Payment Gateway v1.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-01 23:05+0700\n"
+"PO-Revision-Date: 2014-07-01 23:05+0700\n"
+"Last-Translator: Buif <support@browsepress.com>\n"
+"Language-Team: BrowsePress <support@browsepress.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-SearchPath-0: ../wc-gateway-paypal-advanced\n"
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:29
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:78
+msgid "Paypal Advanced"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:68
+msgid "Enable/Disable"
+msgstr "Enable/Disable"
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:69
+msgid "Enable Paypal Advanced Payment Gateway"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:75
+msgid "Title"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:77
+msgid "This controls the title which the user sees during checkout."
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:82
+msgid "Description"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:84
+msgid "This controls the description which the user sees during checkout."
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:88
+msgid "Debug"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:90
+msgid "Enable logging (<code>woocommerce/logs/paypal_advanced.txt</code>)"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:94
+msgid "Vendor"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:96
+msgid ""
+"Your merchant login ID that you created when you registered for the account."
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:100
+msgid "Partner"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:102
+msgid ""
+"The ID provided to you by the authorized PayPal Reseller who registered you "
+"for the Gateway gateway. If you purchased your account directly from PayPal, "
+"use PayPal."
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:106
+msgid "User"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:108
+msgid ""
+"The ID of the user authorized to process transactions. If, however, you have "
+"not set up additional users on the account, USER has the same value as "
+"VENDOR."
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:112
+msgid "Password"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:114
+msgid "The password that you defined while registering for the account."
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:118
+msgid "Layout templates"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:120
+msgid ""
+"Determines whether to use one of the two redirect templates (Layout A or B) "
+"or the embedded template (Layout C)."
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:129
+msgid "The type of the transaction"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:131
+msgid "The processing method to use for each transaction."
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:139
+msgid "Transaction Server"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:141
+msgid ""
+"Use the live or testing (sandbox) gateway server to process transactions?"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:269
+#, php-format
+msgid "Order %s"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:280
+msgid "Shipping via"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:337
+#, php-format
+msgid "Shipping via %s"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:373
+msgid "Thank you for your order."
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:376
+#, php-format
+msgid "Card number for test Visa: %s or MasterCard: %s"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:399
+msgid ""
+"Thank you for your order. We are now redirecting you to PayPal to make "
+"payment."
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:432
+#, php-format
+msgid "Get token error %s"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:468
+msgid "Error: Order Key does not match invoice."
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:473
+#, php-format
+msgid "Aborting, Order #%s is already complete."
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:479
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:481
+#, php-format
+msgid "Validation error: PayPal amounts do not match (gross %s)."
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:494
+msgid "There was a problem connecting to the payment gateway."
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:497
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:616
+msgid "Empty response."
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:517
+msgid "Payment completed"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:533
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:552
+msgid "Unknow error"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:544
+msgid "Cancel order &amp; restore cart"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/classes/class-wc-gateway-paypal-advanced.php:603
+msgid "There was an error processing your order - "
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/wc-gateway-paypal-advanced.php:138
+#, php-format
+msgid ""
+"%sPaypal Error%s: This plugin required PHP at least 5.2.0. PHP currently "
+"version: %s"
+msgstr ""
+
+#: ../wc-gateway-paypal-advanced/wc-gateway-paypal-advanced.php:199
+msgid "Configure"
+msgstr ""
