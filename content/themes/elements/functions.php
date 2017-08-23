@@ -22,6 +22,9 @@ $detect = new Mobile_Detect;
 // Hide admin bar
 add_filter('show_admin_bar', '__return_false');
 
+// Disable woocommerce css
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
 // Add support for post-thumbnails
 // https://codex.wordpress.org/Post_Thumbnails
 add_theme_support( 'post-thumbnails' );

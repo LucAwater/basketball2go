@@ -1,19 +1,24 @@
 section.grid{
   ul{
     width: 100%;
-    
+
     li{
       margin-bottom: 50px;
-      
+
       > *{
         margin-bottom: 15px;
       }
-      
+
       img{
         min-width: 100%;
         display: block;
       }
     }
+  }
+
+  &-products {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
 
@@ -45,19 +50,19 @@ section.grid{
 section.grid ul.isotope-masonry{
   li:nth-child(n){
     margin-bottom: $column-gutter;
-    
+
     img{
       margin-bottom: 0;
     }
   }
 }
 
-@media screen and (min-width: 1400px){
-  section.grid{
-    ul{
-      li{
-        width: 25%;
-      }
-    }
-  }
-}
+// @media screen and (min-width: 1400px){
+//   section.grid{
+//     ul{
+//       li{
+//         width: 25%;
+//       }
+//     }
+//   }
+// }

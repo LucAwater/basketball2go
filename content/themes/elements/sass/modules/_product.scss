@@ -1,0 +1,17 @@
+.grid-products .product {
+    img {
+        border-radius: 10px;
+    }
+
+    &-meta {
+        padding: 1rem .5rem;
+
+        text-align: center;
+
+        h3 {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 26px;
+        }
+    }
+}

@@ -1,1 +1,1 @@
-!function(n){if(n(".parallax").length>0){skrollr.init({render:function(n){}})}}(jQuery);
+!function(n){if(jQuery(".parallax").length>0)skrollr.init({render:function(n){}})}();

@@ -1,1 +1,1 @@
-!function(a){a("a:has(h1, h2, h3, p, div, img)").addClass("has-content")}(jQuery);
+jQuery("a:has(h1, h2, h3, p, div, img)").addClass("has-content");
