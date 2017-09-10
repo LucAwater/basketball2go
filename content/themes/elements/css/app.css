@@ -1114,8 +1114,17 @@ article ul {
     list-style-type: disc;
     list-style-position: inside; }
 
-.grid-products .product img {
+.grid-products .product .product-image-holder {
+  display: block;
+  overflow: hidden;
   border-radius: 10px; }
+  .grid-products .product .product-image-holder img {
+    -webkit-transition: .5s;
+    transition: .5s;
+    border-radius: 10px; }
+  .grid-products .product .product-image-holder:hover img {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
 
 .grid-products .product-meta {
   padding: 1rem .5rem;
@@ -1124,6 +1133,13 @@ article ul {
     font-size: 20px;
     font-weight: 400;
     line-height: 26px; }
+
+body.single-product .product .summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  body.single-product .product .summary-info {
+    padding: 3rem; }
 
 .slider {
   position: relative; }
@@ -1234,6 +1250,11 @@ section {
     margin-bottom: 30px; }
     section .section-header h2 {
       margin-bottom: 15px; }
+
+section.hero-small {
+  color: black;
+  text-align: center;
+  background-color: #f27041; }
 
 section.hero {
   display: -webkit-box;

@@ -1,0 +1,9 @@
+body.single-product .product {
+    .summary {
+        display: flex;
+
+        &-info {
+            padding: 3rem;
+        }
+    }
+}

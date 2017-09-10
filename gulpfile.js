@@ -72,8 +72,4 @@ gulp.task('concat', function () {
     .pipe(gulp.dest('./content/themes/elements/js'));
 });
 
-gulp.task('default', function () {
-  gulp.run('minify-js');
-  gulp.run('concat');
-  gulp.run('watch');
-});
+gulp.task('default',['minify-js', 'concat', 'watch']);
