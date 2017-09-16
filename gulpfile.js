@@ -5,10 +5,14 @@ var concat = require("gulp-concat");
 var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 var autoprefixer = require('gulp-autoprefixer');
+var babel = require('gulp-babel');
 
 var sass_input = './content/themes/elements/sass/**/*.scss';
 var sass_start = './content/themes/elements/sass/app.scss';
 var sass_output = './content/themes/elements/css';
+
+var js_input = './content/themes/elements/js/**/*.js';
+var js_output = './content/themes/elements/js';
 
 var autoprefixerOptions = {
   browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
@@ -45,6 +49,9 @@ gulp.task('minify-js', function () {
       './content/themes/elements/js/init-skrollr.js',
       './content/themes/elements/js/link-heading.js',
     ])
+    .pipe(babel({
+        presets: ['env']
+    }))
     .pipe(uglify())
     .pipe(gulp.dest('./content/themes/elements/js/min'));
 });

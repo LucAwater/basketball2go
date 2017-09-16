@@ -15,6 +15,8 @@ require_once('includes/functions-template/section-header.php');
 require_once('includes/functions-template/section-grid.php');
 require_once('includes/functions-template/section-slider.php');
 
+require_once('woocommerce/woo-functions.php');
+
 // Initialize mobile detect
 require_once('includes/mobile-detect.php');
 $detect = new Mobile_Detect;
