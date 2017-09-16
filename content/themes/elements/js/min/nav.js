@@ -1,1 +1,1 @@
-$(document).ready(function(){var n=$("header nav"),a=$(".nav-open"),c=$(".nav-close");a.on("click",function(){n.addClass("is-active")}),c.on("click",function(){n.removeClass("is-active")})});
+"use strict";$(document).ready(function(){var n=$("header nav"),c=$(".nav-open"),a=$(".nav-close");c.on("click",function(){n.addClass("is-active")}),a.on("click",function(){n.removeClass("is-active")})});

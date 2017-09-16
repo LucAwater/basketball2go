@@ -47,58 +47,26 @@ if ( 0 === ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1
 if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 	$classes[] = 'last';
 }
+
+// Get thumbnail image
+$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
 ?>
 <li <?php post_class( $classes ); ?>>
-
-	<?php
-	/**
-	 * woocommerce_before_shop_loop_item hook.
-	 *
-	 * @hooked woocommerce_template_loop_product_link_open - 10
-	 */
-	do_action( 'woocommerce_before_shop_loop_item' );
-
-	/**
-	 * woocommerce_before_shop_loop_item_title hook.
-	 *
-	 * @hooked woocommerce_show_product_loop_sale_flash - 10
-	 * @hooked woocommerce_template_loop_product_thumbnail - 10
-	 */
-	do_action( 'woocommerce_before_shop_loop_item_title' );
-    ?>
-
-    <div class="product-meta">
-        <!-- <?php
-        /**
-    	 * woocommerce_shop_loop_item_title hook.
-    	 *
-    	 * @hooked woocommerce_template_loop_product_title - 10
-    	 */
-    	do_action( 'woocommerce_shop_loop_item_title' );
-        ?>
-        -->
-
-        <h3><?php echo get_the_title(); ?></h3>
-
-        <?php
-    	/**
-    	 * woocommerce_after_shop_loop_item_title hook.
-    	 *
-    	 * @hooked woocommerce_template_loop_rating - 5
-    	 * @hooked woocommerce_template_loop_price - 10
-    	 */
-    	do_action( 'woocommerce_after_shop_loop_item_title' );
-        ?>
+    <div class="product-image">
+        <a class="product-image-holder" href="<?php echo the_permalink(); ?>">
+            <?php
+            // Image
+            do_action( 'woocommerce_before_shop_loop_item_title' );
+            ?>
+        </a>
     </div>
 
-    <!-- <?php
-	/**
-	 * woocommerce_after_shop_loop_item hook.
-	 *
-	 * @hooked woocommerce_template_loop_product_link_close - 5
-	 * @hooked woocommerce_template_loop_add_to_cart - 10
-	 */
-	do_action( 'woocommerce_after_shop_loop_item' );
-	?> -->
+    <div class="product-meta">
+        <a href="<?php echo the_permalink(); ?>"><h3><?php echo get_the_title(); ?></h3></a>
 
+        <?php
+        // price
+        do_action( 'woocommerce_after_shop_loop_item_title' );
+        ?>
+    </div>
 </li>

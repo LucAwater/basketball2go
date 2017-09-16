@@ -1,1 +1,1 @@
-!function(e){e("section.slider").length>0&&e("section.slider").slider({lightbox:!1})}(jQuery);
+"use strict";!function(e){e("section.slider").length>0&&e("section.slider").slider({lightbox:!1})}(jQuery);

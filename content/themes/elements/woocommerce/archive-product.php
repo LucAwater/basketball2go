@@ -7,6 +7,15 @@ get_header();
 
 if ( have_posts() ):
 
+    ?>
+    <section class="hero-small">
+        <div class="hero-body">
+            <h1>STORE</h1>
+            <h2>Basketballs & Freestyle Basketballs</h2>
+        </div>
+    </section>
+    <?php
+
     section_start('grid grid-products');
         section_body_start('section-body');
             section_grid_start('s-grid-1 m-grid-2 l-grid-4 row');

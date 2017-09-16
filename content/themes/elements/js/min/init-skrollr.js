@@ -1,1 +1,1 @@
-!function(n){if(jQuery(".parallax").length>0)skrollr.init({render:function(n){}})}();
+"use strict";!function(n){if(jQuery(".parallax").length>0)skrollr.init({render:function(n){}})}();
